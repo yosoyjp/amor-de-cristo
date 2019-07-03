@@ -4,22 +4,22 @@
 		<meta charset="UTF-8">
 		<title>Amor de Cristo-Ciénaga | Inicio</title>
 
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/footer-main.css">
-		<link rel="stylesheet" href="css/about-main.css">
-		<link rel="stylesheet" href="css/connection-points-main.css">
-		<link rel="stylesheet" href="css/leaders-main.css">
-		<link rel="stylesheet" href="css/icons/entypo/style.css">
-		<link rel="stylesheet" href="css/jquery.gmaps.css">
-		<link rel="stylesheet" href="css/main-header.css">
+		<link rel="stylesheet" href="./static/css/main.css">
+		<link rel="stylesheet" href="./static/css/footer-main.css">
+		<link rel="stylesheet" href="./static/css/about-main.css">
+		<link rel="stylesheet" href="./static/css/connection-points-main.css">
+		<link rel="stylesheet" href="./static/css/leaders-main.css">
+		<link rel="stylesheet" href="./static/css/icons/entypo/style.css">
+		<link rel="stylesheet" href="./static/css/jquery.gmaps.css">
+		<link rel="stylesheet" href="./static/css/main-header.css">
 
 		<script
 			src="https://code.jquery.com/jquery-3.3.1.js"
 			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 			crossorigin="anonymous">
 		</script>
-		<script type="text/javascript" src="js/main.js"></script>
-		<script src="js/jquery.gmaps.js"></script>
+		<script type="text/javascript" src="./static/js/main.js"></script>
+		<script src="./static/js/jquery.gmaps.js"></script>
 	</head>
 <body>
 	<div id="super">
@@ -41,7 +41,7 @@
 
 	<div id="section-one">
 		<video autoplay muted loop>
-			<source src="res/video/start.mp4" type="video/mp4">
+			<source src="./static/img/start.mp4" type="video/mp4">
 		</video> 
 	</div>
 
@@ -54,13 +54,13 @@
 	                    <p id="textAbout">Cumplimos el mandato de nuestro señor Jesucristo "Por tanto id y haced discipulos..." Mateo 28:19; para este objetivo Ganamos, Consolidamos y Enviamos, Transformando la Sociedad con valores biblicos.</p>
 	                </div>
 	                <div class="imgAbout">
-	                    <img src="res/img/general/mision.jpg" alt="">
+	                    <img src="./static/img/mision.jpg" alt="">
 	                </div>
 	            </div>
 
 	            <div id="vision">
 	                <div class="imgAbout">
-	                    <img src="res/img/general/vision.jpg" alt="">
+	                    <img src="./static/img/vision.jpg" alt="">
 	                </div>
 	                <div class="contentAbout">
 	                    <h2 id="about">Nuestra Visión</h2>
@@ -74,7 +74,7 @@
 				<div id="list">
 					<div class="people">
 						<div class="img">
-							<img src="res/img/leaders/pastor.jpg" alt="carlos Alvarez">
+							<img src="./static/img/pastor.jpg" alt="carlos Alvarez">
 						</div>
 						<div class="description">
 							<span class="position">Pastor</span>
@@ -83,7 +83,7 @@
 					</div>
 					<div class="people">
 						<div class="img">
-							<img src="res/img/leaders/pastora.jpg" alt="carlos Alvarez">
+							<img src="./static/img/pastora.jpg" alt="carlos Alvarez">
 						</div>
 						<div class="description">
 							<span class="position">Pastora</span>
@@ -92,7 +92,7 @@
 					</div>
 					<div class="people">
 						<div class="img">
-							<img src="res/img/leaders/carlos.jpg" alt="carlos Alvarez">
+							<img src="./static/img/carlos.jpg" alt="carlos Alvarez">
 						</div>
 						<div class="description">
 							<span class="position">Lider de Punto de Conexión</span>

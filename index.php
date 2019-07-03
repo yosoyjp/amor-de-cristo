@@ -4,8 +4,55 @@ require './controller/routing/route.php';
 
 // require 'ProductsController.php';
 
+
+
+$URL_DEV = '/amordecristo.com.co';
+
+
+//echo $ruta[count($ruta)-1];
+
 $router = new Router($_SERVER['REQUEST_URI']);
-$router->add('/', function ()
+
+$router->add($URL_DEV.'/static/:type/:file', function($type, $file){
+	$ruta = explode('/', $_SERVER['REQUEST_URI']);
+
+	$fileArray = explode('.', $file);
+	$extension = $fileArray[count($fileArray)-1];
+
+	switch ($extension) {
+		case 'js':
+			header("Content-type: text/javascript");
+			break;
+		case 'html':
+			header("Content-type: text/html");
+			break;
+		case 'css':
+			header("Content-type: text/css");
+			break;
+		case 'jpg':
+			header("Content-type: image/*");
+			break;
+		case 'gif':
+			header("Content-type: image/*");
+			break;
+		case 'jpeg':
+			header("Content-type: image/*");
+			break;
+		case 'png':
+			header("Content-type: image/*");
+			break;
+		case 'mp4':
+			header("Content-type: video/mp4");
+			break;
+		default:
+			return null;
+			break;
+	}
+
+	return readfile('./views/static/'.$type.'/'.$file);
+});
+
+$router->add($URL_DEV.'/', function ()
 {
 	return require ('./views/landing.php');
 });

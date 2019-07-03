@@ -9,22 +9,17 @@
         public $phone;
         public $password;
      
-        public function __CONSTRUCT()
-        {
-            try
-            {
+        public function __CONSTRUCT(){
+            try{
                 $this->pdo = Database::StartUp();     
             }
-            catch(Exception $e)
-            {
+            catch(Exception $e){
                 die($e->getMessage());
             }
         }
      
-        public function findAlls()
-        {
-            try
-            {
+        public function findAlls(){
+            try{
                 $result = array();
      
                 $stm = $this->pdo->prepare("SELECT * FROM users");
@@ -38,7 +33,7 @@
             }
         }
 
-        public function getByGroup($id, $type){
+        public function findByGroup($id, $type){
             try{
                 $stm = $this->pdo
                           ->prepare("SELECT * FROM groups_has_users WHERE groupId = ? AND type = ?");
@@ -50,9 +45,8 @@
             }
         }
      
-        public function getById($id){
-            try 
-            {
+        public function findById($id){
+            try{
                 $stm = $this->pdo
                           ->prepare("SELECT * FROM users WHERE id = ?");
                           
@@ -78,8 +72,7 @@
             }
         }
      
-        public function update($data)
-        {
+        public function update($data){
             try 
             {
                 $sql = "UPDATE users SET 
@@ -87,7 +80,6 @@
                             surname          = ?, 
                             phone        = ?,
                             email        = ?,
-                            password        = ?
                         WHERE id = ?";
      
                 $this->pdo->prepare($sql)
@@ -106,9 +98,10 @@
                 die($e->getMessage());
             }
         }
+
+        //Pendiente hacer un update de contraseña
      
-        public function create(User $data)
-        {
+        public function create(User $data){
             try 
             {
             $sql = "INSERT INTO users (name, surname, phone, email, password) 
