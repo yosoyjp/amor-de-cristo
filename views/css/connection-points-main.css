@@ -1,0 +1,28 @@
+#connection-points{
+	width: 100%;
+	background: red;
+	min-height: 200px;
+}
+
+#title-connection-points{
+	font-size: 2.2rem;
+	padding: 60px;
+	margin-left: 60px;
+	color: white;
+	font-weight: 200;
+}
+
+#map{
+	width: 90%;
+	margin-left: 5%;
+}
+
+#map > iframe{
+	width: 100%;
+	height: 600px;
+}
+
+.gmaps {
+	height:500px;
+	width: 100%;
+}

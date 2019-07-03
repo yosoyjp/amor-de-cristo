@@ -1,0 +1,33 @@
+@font-face{
+    font-family: "comfortaa";
+    src: url("fonts/Comfortaa-Regular.ttf")
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "comfortaa";
+}
+
+#section-one{
+	position: absolute;
+	width: 100%;
+}
+
+#section-one video{
+	position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+#elements{
+	position: absolute;
+	width: 100%;
+	background: white;
+}
+
+#sections{
+	width: 100%;
+}

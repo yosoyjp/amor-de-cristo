@@ -1,0 +1,77 @@
+div#leaders{
+	width: 100%;
+	background: url(../res/img/general/leaders.jpg) no-repeat center center fixed;
+	background-size: cover;
+	padding-bottom: 40px;
+}
+
+#title-leaders{
+	font-size: 2.2rem;
+	padding: 30px;
+	margin-left: 60px;
+	color: white;
+	font-weight: 200;
+}
+
+#list{
+	display: inline-flex;
+	padding: 0px 10px;
+	width: calc(100% - 20px);
+}
+
+#list > .people{
+	max-width: 200px;
+	background: rgba(255, 255, 255, 0.8);
+	padding: 20px 0px;
+	margin: 0px 10px 20px;
+	border-radius: 2px;
+	transition: all 100ms ease-out;
+}
+
+#list > .people:hover{
+	background: white;
+}
+
+#list > .people > .img{
+	width: 80%;
+	margin-left: 10%;
+	height: auto;
+}
+
+#list > .people > .img > img{
+	width: 100%;
+	border-radius: 50%;
+}
+
+#list > .people > .description{
+	text-align: center;
+}
+
+#list > .people > .description > span{
+	display: block;
+	margin-top: 8px;
+}
+
+#list > .people > .description > span.name{
+	font-weight: 600;
+	font-size: 1.2rem;
+}
+
+#see{
+	--half-negative: calc(-1.5rem - 10px);
+	margin-top: calc(40px + var(--half-negative));
+	margin-left: calc(50% + var(--half-negative));
+	position: absolute;
+	border-radius: 50%;
+	display: inline-flex;
+	font-size: 3rem;
+	background: white;
+	color: black;
+	padding: 10px;
+	transition: all 100ms ease-out;
+}
+
+#see:hover{
+	cursor: pointer;
+	transform: scale(1.2);
+}

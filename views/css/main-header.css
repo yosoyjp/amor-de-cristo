@@ -1,0 +1,20 @@
+header{
+	position: absolute;
+	background: black;
+	width: 100%;
+	height: 160px;
+	z-index: 2;
+	display: flex;
+}
+
+#logo{
+	background: red;
+	height: 100%;
+	width: 40%;
+}
+
+#menu{
+	background: blue;
+	height: 100%;
+	width: 60%;
+}
