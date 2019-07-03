@@ -43,17 +43,19 @@ class Router {
 	}
 	public function sendResponse($response)
 	{
-		if (is_string($response))
-		{
-			echo $response;
-		}
-		else if (is_array($response))
-		{
-			echo json_encode($response);
-		}
-		else if ($response instanceof Response)
-		{
-			$response->execute();
+		if($response){
+			if (is_string($response))
+			{
+				echo $response;
+			}
+			else if (is_array($response))
+			{
+				echo json_encode($response);
+			}
+			else if ($response instanceof Response)
+			{
+				$response->execute();
+			}
 		}
 		else
 		{

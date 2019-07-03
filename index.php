@@ -7,7 +7,7 @@ require './controller/routing/route.php';
 $router = new Router($_SERVER['REQUEST_URI']);
 $router->add('/', function ()
 {
-	required ('./views/index.html');
+	return require ('./views/landing.php');
 });
 
 // $router->add('/productos', 'ProductsController::index');
