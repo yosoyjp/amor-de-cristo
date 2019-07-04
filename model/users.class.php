@@ -110,12 +110,11 @@
             $this->pdo->prepare($sql)
                  ->execute(
                     array(
-                         $data->name, 
+                        $data->name, 
                         $data->surname,
                         $data->phone, 
                         $data->email, 
-                         $data->password 
-                       
+                        $data->password
                     )
                 );
             } catch (Exception $e) 
