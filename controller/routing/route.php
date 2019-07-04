@@ -12,7 +12,7 @@ class Route {
 	public function __construct($uri, $closure, $isStaticFile){
 		$this->uri = $uri;
 		$this->closure = $closure;
-		$this->isStatic = $isStatic;
+		$this->isStatic = $isStaticFile;
 	}
 
 	public function getUriPattern(){

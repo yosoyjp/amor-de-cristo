@@ -44,6 +44,9 @@ $router->add($URL_DEV.'/static/:type/:file', function($type, $file){
 		case 'mp4':
 			header("Content-type: video/mp4");
 			break;
+		case 'ttf':
+			header("Content-type: font/ttf");
+			break;
 		default:
 			return null;
 			break;

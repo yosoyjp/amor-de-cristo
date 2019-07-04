@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="./static/css/about-main.css">
 		<link rel="stylesheet" href="./static/css/connection-points-main.css">
 		<link rel="stylesheet" href="./static/css/leaders-main.css">
-		<link rel="stylesheet" href="./static/css/icons/entypo/style.css">
+		<!--<link rel="stylesheet" href="./static/css/icons/entypo/style.css">-->
 		<link rel="stylesheet" href="./static/css/jquery.gmaps.css">
 		<link rel="stylesheet" href="./static/css/main-header.css">
 

@@ -16,33 +16,28 @@ class Router {
 		}
 		$this->requestUri = $requestUri;
 	}
-	public function getRequestUri()
-	{
+	public function getRequestUri(){
 		return $this->requestUri;
 	}
-	public function add($uri, $closure)
-	{
-		$route = new Route($uri, $closure);
+	
+	public function add($uri, $closure){
+		$route = new Route($uri, $closure, false);
 		array_push($this->routes, $route);
 	}
-	public function run()
-	{
+
+	public function run(){
 		$response = false;
 		$requestUri = $this->getRequestUri();
-		foreach ($this->routes as $route)
-		{
-			if ($route->checkIfMatch($requestUri))
-			{
+		foreach ($this->routes as $route){
+			if ($route->checkIfMatch($requestUri)){
 				$response = $route->execute();
-				// break para no seguir dando vueltas
-				// Ya se encontró la ruta correspondiente
 				break;
 			}
 		}
 		$this->sendResponse($response);
 	}
-	public function sendResponse($response)
-	{
+
+	public function sendResponse($response){
 		if($response){
 			if (is_string($response))
 			{
