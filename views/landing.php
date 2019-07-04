@@ -11,7 +11,8 @@
 		<link rel="stylesheet" href="./static/css/leaders-main.css">
 		<link rel="stylesheet" href="./static/css/icons.css">
 		<link rel="stylesheet" href="./static/css/jquery.gmaps.css">
-		<link rel="stylesheet" href="./static/css/main-header.css">
+		<link rel="stylesheet" href="./static/css/header-main.css">
+		<link rel="stylesheet" href="./static/css/form-main.css">
 
 		<script
 			src="https://code.jquery.com/jquery-3.3.1.js"
@@ -24,18 +25,37 @@
 <body>
 	<div id="super">
 		<div id="login">
-			<div id="container">
-				
+			<div id="container-login">
+				<div data-validate="">
+					<span>Usuario</span>
+					<input type="text" id="username" placeholder="Ingrese Usuario">
+					<span></span>
+				</div>
+
+				<div data-validate="">
+					<span>Contraseña</span>
+					<input type="password" id="pass" placeholder="Ingrese Contraseña">
+					<span></span>
+				</div>
+
+				<div class="container-send">
+					<button class="send">Entrar</button>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<header>
 		<div id="logo">
-			<img src="" alt="">
+			<img src="./static/img/imagotipo.png" alt="">
 		</div>
 		<div id="menu">
-			
+			<ul>
+				<li>Quienes Somos</li>
+				<li>Puntos de Conexion</li>
+				<li>Departamentos</li>
+				<li id="login">Ingresar</li>
+			</ul>
 		</div>
 	</header>
 

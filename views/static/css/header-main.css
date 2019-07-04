@@ -1,0 +1,48 @@
+header{
+	position: fixed;
+	background: rgba(255, 255, 255, .8);
+	width: 100%;
+	height: 140px;
+	z-index: 2;
+	display: flex;
+}
+
+#logo{
+	height: 100%;
+	width: 40%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#logo > img{
+	width: 70%;
+}
+
+#menu{
+	height: 100%;
+	width: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#menu > ul{
+	padding: 0px;
+}
+#menu > ul > li{
+	display: inline;
+	padding: 10px 5px;
+	border: solid 2px transparent;
+	border-radius: 5px;
+	font-size: 1.2rem;
+}
+#menu > ul > li#login{
+	background: white;
+	padding: 10px 8px;
+}
+#menu > ul > li:hover{
+	cursor: pointer;
+	border: solid 2px white;
+}
+#menu > ul > li#login:hover{
+	background: transparent;
+}
