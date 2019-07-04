@@ -1,6 +1,6 @@
 div#leaders{
 	width: 100%;
-	background: url(../res/img/general/leaders.jpg) no-repeat center center fixed;
+	background: url(../img/leaders.jpg) no-repeat center center fixed;
 	background-size: cover;
 	padding-bottom: 40px;
 }
@@ -30,6 +30,7 @@ div#leaders{
 
 #list > .people:hover{
 	background: white;
+	cursor: pointer;
 }
 
 #list > .people > .img{
