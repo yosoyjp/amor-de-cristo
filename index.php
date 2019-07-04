@@ -2,7 +2,7 @@
 require './controller/routing/router.php';
 require './controller/routing/route.php';
 
-// require 'ProductsController.php';
+require './controller/group.controller.php';
 
 
 
@@ -55,12 +55,11 @@ $router->add($URL_DEV.'/static/:type/:file', function($type, $file){
 	return readfile('./views/static/'.$type.'/'.$file);
 });
 
-$router->add($URL_DEV.'/', function ()
-{
+$router->add($URL_DEV.'/', function (){
 	return require ('./views/landing.php');
 });
 
-// $router->add('/productos', 'ProductsController::index');
+$router->add($URL_DEV.'/groups', 'GroupController::getAlls');
 // $router->add('/productos/:name', 'ProductsController::show');
 
 // /ruta/con/un/monton/de/parametros

@@ -39,12 +39,11 @@ class Router {
 
 	public function sendResponse($response){
 		if($response){
-			if (is_string($response))
-			{
+			if (is_string($response)){
 				echo $response;
 			}
-			else if (is_array($response))
-			{
+			else if (is_array($response) OR is_object($response)){
+				header("Content-Type: application/json; charset=UTF-8");
 				echo json_encode($response);
 			}
 			else if ($response instanceof Response)
