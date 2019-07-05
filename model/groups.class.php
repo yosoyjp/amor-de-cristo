@@ -8,6 +8,7 @@
         public $id;
         public $name;
         public $netId;
+        public $members;
      
         public function __CONSTRUCT()
         {

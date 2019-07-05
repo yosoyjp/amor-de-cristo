@@ -7,7 +7,7 @@ require './controller/group.controller.php';
 
 
 $URL_DEV = '/amordecristo.com.co';
-
+echo $_SERVER["REQUEST_METHOD"];
 
 //echo $ruta[count($ruta)-1];
 

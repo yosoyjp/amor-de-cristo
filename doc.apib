@@ -1,23 +1,62 @@
 FORMAT: 1A
 
-# The Simplest API
-This is one of the simplest APIs written in the **API Blueprint**. One plain
-resource combined with a method and that's it! We will explain what is going on
-in the next installment - 
-[Resource and Actions](02.%20Resource%20and%20Actions.md).
-
-**Note:** As we progress through the examples, do not also forget to view the
-[Raw](https://raw.github.com/apiaryio/api-blueprint/master/examples/01.%20Simplest%20API.md)
-code to see what is really going on in the API Blueprint, as opposed to just
-seeing the output of the Github Markdown parser.
-
-Also please keep in mind that every single example in this course is a **real
-API Blueprint** and as such you can **parse** it with the 
-[API Blueprint parser](https://github.com/apiaryio/drafter) or one of its
-[bindings](https://github.com/apiaryio/drafter#bindings).
+# Amor De Cristo API
 
 
-# GET /message
-+ Response 200 (text/plain)
+# Group Grupos
 
-        Hello World!
+## Coleccion de grupos [/groups]
+
+### Lista todos los grupos [GET]
+
++ Response 200 (application/json)
+
+		[
+			{
+				id: 1,
+				name: "Jovenes de reto",
+				netId: 1,
+				workTeam: [
+					{
+						userId: 1,
+						type: "Lider"
+					},
+					{
+						userId: 2,
+						type: "Lider"
+					},
+					{
+						userId: 3,
+						type: "Columna"
+					}
+				]
+			}
+		]
+
+## Crear grupo [/group]
+
+### Crear un nuevo grupo [POST]
+Se crea un nuevo grupo dentro de una red sin asignacion de equipo de trabajo enviando el nombre y el id de la red a la que pertenece.
+
++ Request JSON Message
+
+    + Headers
+
+            Accept: application/json
+
+    + Body
+    
+    		{
+    			name: "Nombre del nuevo grupo",
+    			netId: 2
+    		}
+
++ Response 200 (application/json)
+
+		[
+			{
+				id: 2,
+				name: "Nombre del nuevo grupo",
+				netId: 2,
+			}
+		]
