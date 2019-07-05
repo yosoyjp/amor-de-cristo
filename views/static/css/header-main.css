@@ -1,21 +1,25 @@
 header{
 	position: fixed;
-	background: rgba(255, 255, 255, .8);
+	background: rgba(255, 255, 255, 0.4);
 	width: 100%;
-	height: 140px;
-	z-index: 2;
+	top: 0;
+	z-index: 1;
 	display: flex;
+	align-items: center;
 }
 
 #logo{
-	height: 100%;
 	width: 40%;
+	height: 110px;
+	margin: 15px 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: all 200ms ease;
 }
+
 #logo > img{
-	width: 70%;
+	height: 100%;
 }
 
 #menu{
@@ -23,11 +27,13 @@ header{
 	width: 60%;
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: flex-end;
 }
+
 #menu > ul{
-	padding: 0px;
+	margin-right: 35px;
 }
+
 #menu > ul > li{
 	display: inline;
 	padding: 10px 5px;
@@ -35,14 +41,17 @@ header{
 	border-radius: 5px;
 	font-size: 1.2rem;
 }
-#menu > ul > li#login{
+
+#menu > ul > li#login-menu{
 	background: white;
 	padding: 10px 8px;
 }
+
 #menu > ul > li:hover{
 	cursor: pointer;
 	border: solid 2px white;
 }
+
 #menu > ul > li#login:hover{
 	background: transparent;
 }

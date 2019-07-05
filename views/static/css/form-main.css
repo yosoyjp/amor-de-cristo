@@ -1,0 +1,86 @@
+.hidden{
+	visibility: hidden;
+}
+
+#super{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.visible{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1000;
+	background: rgba(0, 0, 0, .8);
+}
+
+#login{
+	width: 70%;
+	padding: 100px 0;
+	background: white;
+	margin: 40px 10%;
+	text-align: center;
+	border-radius: 8px;
+}
+
+#login > h2{
+	font-size: 2rem;
+	padding: 10px 0;
+}
+
+#container-login{
+	margin: 0px 10%;
+}
+
+#container-login > div{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 10px 0;
+	font-size: 1.2rem;
+}
+
+#container-login > div > span{
+	width: 20%;
+	margin-right: 12px;
+	text-align: right;
+}
+
+#container-login > div > input{
+	width: 50%;
+	font-size: 1.2rem;
+	padding: 5px 0;
+	border: none;
+	border-bottom: 2px solid black;
+	overflow: visible;
+}
+
+#send{
+	font-size: 1.2rem;
+	padding: 15px 30px;
+	margin-top: 10px;
+	background-color: rgb(15, 39, 101);
+	color: white;
+	border: none;
+}
+
+#send:hover{
+	cursor: pointer;
+	background: rgb(86, 115, 191);
+}
+
+#send:active{
+	background: white;
+	color: rgb(15, 39, 101);
+}
+
+#remember{
+	margin-top: 10px;
+	color: rgb(15, 39, 101);
+	cursor: pointer;
+}

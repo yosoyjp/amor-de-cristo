@@ -20,27 +20,24 @@
 			crossorigin="anonymous">
 		</script>
 		<script type="text/javascript" src="./static/js/main.js"></script>
-		<script src="./static/js/jquery.gmaps.js"></script>
 	</head>
 <body>
-	<div id="super">
+	<div id="super" class="hidden">
 		<div id="login">
+			<h2>Iniciar Sesión</h2>
 			<div id="container-login">
 				<div data-validate="">
 					<span>Usuario</span>
-					<input type="text" id="username" placeholder="Ingrese Usuario">
-					<span></span>
+					<input type="text" id="username" placeholder="Ejemplo@email.com">
 				</div>
 
 				<div data-validate="">
 					<span>Contraseña</span>
-					<input type="password" id="pass" placeholder="Ingrese Contraseña">
-					<span></span>
+					<input type="password" id="pass" placeholder="Segura">
 				</div>
 
-				<div class="container-send">
-					<button class="send">Entrar</button>
-				</div>
+				<button id="send">Entrar</button>
+				<p id="remember">¿Olvidó su contraseña?</p>
 			</div>
 		</div>
 	</div>
@@ -54,7 +51,7 @@
 				<li>Quienes Somos</li>
 				<li>Puntos de Conexion</li>
 				<li>Departamentos</li>
-				<li id="login">Ingresar</li>
+				<li id="login-menu" onclick="javascript:login();">Ingresar</li>
 			</ul>
 		</div>
 	</header>
@@ -131,8 +128,82 @@
 		</div>
 		
 		<footer>
-			<div id="reserved">
-				Copyright 2018. All rights reserved | Privacy Policy
+			<div id="fup">
+				<div class="fup-section">
+					<i class="icon-location-pin"></i>
+					<span><b>Calle 20#17-06, Ciénaga-Madalena</b><br>Colombia</span>
+				</div>
+				<div class="fup-section">
+					<i class="icon-mail"></i>
+					<span><b>amordecristocienaga@gmail.com</b></span>
+				</div>
+			</div>
+			<div id="fmedium">
+				<div id="fus">
+					<div>
+						<img src="./static/img/isotipo.png" alt="">
+					</div>
+					<p>Cumplimos el mandato de nuestro señor Jesucristo "Por tanto id y haced discipulos..." Mateo 28:19; para este objetivo Ganamos, Consolidamos y Enviamos, Transformando la Sociedad con valores biblicos.</p>
+					<div id="links">
+						<div>
+							<img src="./static/img/facebook.svg" alt="facebook">
+						</div>
+						<div>
+							<img src="./static/img/instagram.svg" alt="facebook">
+						</div>
+						<div>
+							<img src="./static/img/youtube.svg" alt="facebook">
+						</div>
+						<div>
+							<img src="./static/img/twitter.svg" alt="facebook">
+						</div>
+						<div>
+							<img src="./static/img/google+.svg" alt="facebook">
+						</div>
+					</div>
+				</div>
+				<div id="info">
+					<div id="menu-info">
+						<h3>enlaces rápidos</h3>
+						<ul>
+							<li><span>-</span> Quienes Somos</li>
+							<li><span>-</span> Puntos de Conexión</li>
+							<li><span>-</span> Departamentos</li>
+						</ul>
+					</div>
+
+					<div id="service-info">
+						<h3>Nuestros Servicios</h3>
+						<ul>
+							<li>Viernes 7:00 p.m. (UTC-5)</li>
+							<li>Domingo 8:00 a.m. (UTC-5)</li>
+						</ul>
+					</div>
+				</div>
+				<div id="news">
+					<h3>Noticias</h3>
+					<div id="new">
+						<div id="img-new">
+							<img src="./static/img/new1.jpg" alt="">
+						</div>
+						<div id="text-new">
+							<p id="title-new">Lorem ipsum dolor sit amet.</p>
+							<span id="date-new">SEPT 02, 19</span>
+						</div>
+					</div>
+					<div id="new">
+						<div id="img-new">
+							<img src="./static/img/new1.jpg" alt="">
+						</div>
+						<div id="text-new">
+							<p id="title-new">Lorem ipsum dolor sit amet.</p>
+							<span id="date-new">SEPT 02, 19</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="fdown">
+				<span>© 2019 Amor de Cristo-Ciénaga</span> <span>All rights reserved | Privacy Policy</span>
 			</div>
 		</footer>
 	</div>

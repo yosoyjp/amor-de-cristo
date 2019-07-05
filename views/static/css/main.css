@@ -2,12 +2,19 @@
     font-family: "comfortaa";
     src: url("../fonts/Comfortaa-Regular.ttf")
 }
+@font-face{
+    font-family: "comfortaa-Bold";
+    src: url("../fonts/Comfortaa-Bold.ttf")
+}
+@font-face{
+    font-family: "comfortaa-Light";
+    src: url("../fonts/Comfortaa-Light.ttf")
+}
 
 *{
 	margin: 0;
 	padding: 0;
 	font-family: "comfortaa";
-	transition: all 200ms ease;
 }
 
 #section-one{
@@ -17,6 +24,7 @@
 
 #section-one video{
 	position: fixed;
+	top: 0px;
     min-width: 100%;
     min-height: 100%;
     width: auto;

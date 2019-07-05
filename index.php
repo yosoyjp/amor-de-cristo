@@ -38,6 +38,9 @@ $router->add($URL_DEV.'/static/:type/:file', function($type, $file){
 		case 'jpeg':
 			header("Content-type: image/*");
 			break;
+		case 'svg':
+			header("Content-type: image/svg+xml");
+			break;
 		case 'png':
 			header("Content-type: image/*");
 			break;

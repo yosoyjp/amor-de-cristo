@@ -1,5 +1,159 @@
 footer{
 	background: black;
 	width: 100%;
-	min-height: 100px;
+}
+
+#fup{
+	display: flex;
+	position: absolute;
+	margin-left: 5%;
+	width: 90%;
+	background: rgb(15, 39, 101);
+	justify-content: space-around;
+}
+
+.fup-section{
+	margin: 20px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.fup-section > i{
+	padding: 8px;
+	font-size: 2.5rem;
+	background: rgb(10, 27, 71);
+	border-radius: 50%;
+	color: white;
+}
+
+.fup-section > span{
+	font-family: "comfortaa-Light";
+	margin-left: 5px;
+	text-align: center;
+	color: white;
+}
+
+.fup-section > span > b{
+	font-family: "comfortaa-Bold";
+	font-weight: 600;
+}
+
+#fmedium{
+	--padding: 60px;
+	width: calc(100% - var(--padding)*2);
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+	background: url(../img/footer.jpg) no-repeat center center;
+	background-size: cover;
+	display: flex;
+}
+
+#fus{
+	width: 40%;
+	color: white;
+}
+
+#fus > div{
+	height: 100px;
+}
+
+#fus > div > img{
+	height: 100%;
+}
+
+#fus > p{
+	width: 80%;
+}
+
+#links{
+	margin-top: 20px;
+	display: flex;
+	cursor: pointer;
+}
+
+#links > div{
+	margin: 0px 10px;
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	background: rgb(48, 59, 81);
+	padding: 8px;
+}
+
+#links > div > img{
+	height: 100%;
+}
+
+#info{
+	color: white;
+	width: 30%;
+}
+
+#info > div > h3{
+	font-size: 1.2rem;
+	font-family: "comfortaa-Bold"
+}
+
+#info > div > ul{
+	list-style: none;
+	margin-left: 15px;
+}
+
+#info > div > ul > li{
+	margin: 15px 0px;
+	font-family: "comfortaa"
+}
+
+#info > div > ul > li > span{
+	color: rgb(15, 39, 101);
+	font-weight: 800;
+}
+
+#service-info{
+	margin-top: 30px;
+}
+
+#news{
+	color: white;
+}
+
+#new{
+	margin: 10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#img-new{
+	margin: 5px;
+	height: 80px;
+	width: 80px;
+	background: white;
+	overflow: hidden;
+}
+
+#img-new > img{
+	height: 100%;
+}
+
+#title-new{
+	font-family: "comfortaa-Bold";
+	font-size: 1.1rem;
+}
+
+#date-new{
+	font-size: .8rem;
+}
+
+#fdown{
+	padding: 30px 80px;
+	display: flex;
+	justify-content: space-between;
+	color: white;
+	background: rgb(0, 1, 47);
+}
+
+#fdown > span{
+	display: block;
 }
