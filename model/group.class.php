@@ -1,5 +1,4 @@
 <?php
-    require 'model/database.class.php';
 
     class Group{
         private $pdo;

@@ -4,17 +4,16 @@ require './controller/routing/route.php';
 
 require './controller/group.controller.php';
 require './controller/net.controller.php';
-
+require './model/database.class.php';
 
 
 $URL_DEV = '/amordecristo.com.co';
-echo $_SERVER["REQUEST_METHOD"];
-
-//echo $ruta[count($ruta)-1];
+//echo $_SERVER["REQUEST_METHOD"];
 
 $router = new Router($_SERVER['REQUEST_URI']);
 
-$router->add($URL_DEV.'/static/:type/:file', function($type, $file){
+//Server file statics;
+$router->get($URL_DEV.'/static/:type/:file', function($type, $file){
 	$ruta = explode('/', $_SERVER['REQUEST_URI']);
 
 	$fileArray = explode('.', $file);
@@ -56,15 +55,16 @@ $router->add($URL_DEV.'/static/:type/:file', function($type, $file){
 	return readfile('./views/static/'.$type.'/'.$file);
 });
 
-$router->add($URL_DEV.'/', function (){
+$router->get($URL_DEV.'/', function (){
 	return require ('./views/landing.php');
 });
 
 
 // API
 
-$router->add($URL_DEV.'/groups', 'GroupController::getAlls');
+$router->get($URL_DEV.'/groups', 'GroupController::getAlls');
 
-$router->add($URL_DEV.'/nets', 'NetController::getAlls');
+$router->get($URL_DEV.'/nets', 'NetController::getAlls');
+$router->post($URL_DEV.'/net', 'NetController::getAlls');
 
-$router->run();
+$router->run($_SERVER["REQUEST_METHOD"]);

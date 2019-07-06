@@ -1,6 +1,4 @@
 <?php
-    require 'model/database.class.php';
-
     class Net{
         private $pdo;
 
@@ -92,14 +90,17 @@
             try 
             {
             $sql = "INSERT INTO ".self::TABLE." (name) 
-                    VALUES (?)";
+                    VALUES (?);
+                    SELECT LAST_INSERT_ID();
+                    ";
      
-            $this->pdo->prepare($sql)
+            $stm = $this->pdo->prepare($sql)
                  ->execute(
                     array(
                          $data->name
                     )
                 );
+            return $stm->fetch(PDO::FETCH_OBJ);
             } catch (Exception $e) 
             {
                 die($e->getMessage());

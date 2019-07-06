@@ -13,5 +13,11 @@
 			$net = new Net();
 			return $net->findAlls();
 		}
+
+		public function newNet($name){
+			$net = new Net();
+
+			return $net->create($data->name = $name);
+		}
 	}
 ?>

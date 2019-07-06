@@ -1,11 +1,14 @@
 <?php
 class Router {
 	protected $requestUri;
-	protected $routes;
+	protected $postroutes;
+	protected $getroutes;
+
 	const GET_PARAMS_DELIMITER = '?';
 	public function __construct($requestUri)
 	{
-		$this->routes = [];
+		$this->postRoutes = [];
+		$this->getRoutes = [];
 		$this->setRequestUri($requestUri);
 	}
 	public function setRequestUri($requestUri)
@@ -19,20 +22,43 @@ class Router {
 	public function getRequestUri(){
 		return $this->requestUri;
 	}
-	
-	public function add($uri, $closure){
+
+	public function get($uri, $closure){
 		$route = new Route($uri, $closure, false);
-		array_push($this->routes, $route);
+		array_push($this->getRoutes, $route);
 	}
 
-	public function run(){
+	public function post($uri, $closure){
+		$route = new Route($uri, $closure, false);
+		array_push($this->postRoutes, $route);
+	}
+
+	public function run($method){
 		$response = false;
 		$requestUri = $this->getRequestUri();
-		foreach ($this->routes as $route){
-			if ($route->checkIfMatch($requestUri)){
-				$response = $route->execute();
+
+		//Verificamos el metodo de la ruta solicitada
+		switch ($method) {
+			case 'GET':
+				foreach ($this->getRoutes as $route){
+					if ($route->checkIfMatch($requestUri)){
+						$response = $route->execute();
+						break;
+					}
+				}
 				break;
-			}
+			case 'POST':
+				foreach ($this->postRoutes as $route){
+					if ($route->checkIfMatch($requestUri)){
+						$response = $route->execute();
+						break;
+					}
+				}
+				break;
+			default:
+				header("HTTP/1.0 404 Not Found");
+				exit('404');
+				break;
 		}
 		$this->sendResponse($response);
 	}
