@@ -1,10 +1,11 @@
 <?php
-
-    $table = 'groups';
+    require 'model/database.class.php';
 
     class Group{
         private $pdo;
         
+        const TABLE = 'groups';
+
         public $id;
         public $name;
         public $netId;
@@ -28,7 +29,7 @@
             {
                 $result = array();
      
-                $stm = $this->pdo->prepare("SELECT * FROM ".$table);
+                $stm = $this->pdo->prepare("SELECT * FROM ".self::TABLE);
                 $stm->execute();
      
                 return $stm->fetchAll(PDO::FETCH_OBJ);
@@ -44,7 +45,7 @@
             try 
             {
                 $stm = $this->pdo
-                          ->prepare("SELECT * FROM {$table} WHERE id = ?");
+                          ->prepare("SELECT * FROM ".self::TABLE." WHERE id = ?");
                           
      
                 $stm->execute(array($id));
@@ -60,7 +61,7 @@
             try 
             {
                 $stm = $this->pdo
-                            ->prepare("DELETE FROM {$table} WHERE id = ?");			          
+                            ->prepare("DELETE FROM ".self::TABLE." WHERE id = ?");			          
      
                 $stm->execute(array($id));
             } catch (Exception $e) 
@@ -72,7 +73,7 @@
         public function update($data){
             try 
             {
-                $sql = "UPDATE {$table} SET 
+                $sql = "UPDATE ".self::TABLE." SET 
                             name      		= ?,
                             netId          = ?,
                         WHERE id = ?";
@@ -94,7 +95,7 @@
         public function create(User $data){
             try 
             {
-            $sql = "INSERT INTO ${table} (name, netId) 
+            $sql = "INSERT INTO ".self::TABLE." (name, netId) 
                     VALUES (?, ?,)";
      
             $this->pdo->prepare($sql)

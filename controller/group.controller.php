@@ -1,10 +1,11 @@
 <?
+	require 'model/group.class.php';
+
 	class GroupController{
 
 		public function getAlls(){
-			$response = new stdClass;
-			$response->hola = "mundo";
-			return $response;
+			$group = new Group();
+			return $group->findAlls();
 		}
 	}
 ?>
