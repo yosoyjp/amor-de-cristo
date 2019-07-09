@@ -72,7 +72,7 @@ footer{
 	cursor: pointer;
 }
 
-#links > div{
+#links > a > div{
 	margin: 0px 10px;
 	height: 25px;
 	width: 25px;
@@ -81,7 +81,7 @@ footer{
 	padding: 8px;
 }
 
-#links > div > img{
+#links > a > div > img{
 	height: 100%;
 }
 
@@ -102,7 +102,11 @@ footer{
 
 #info > div > ul > li{
 	margin: 15px 0px;
-	font-family: "comfortaa"
+	font-family: "comfortaa";
+}
+
+#info > div > ul > li > a{
+	color: white;
 }
 
 #info > div > ul > li > span{
@@ -119,14 +123,19 @@ footer{
 }
 
 #new{
-	margin: 10px 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
+	border-radius: 2px;
+}
+
+#new:hover{
+	background: rgba(255, 255, 255, .2);
 }
 
 #img-new{
-	margin: 5px;
+	margin: 10px;
 	height: 80px;
 	width: 80px;
 	background: white;

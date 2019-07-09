@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="./static/css/about-main.css">
 		<link rel="stylesheet" href="./static/css/connection-points-main.css">
 		<link rel="stylesheet" href="./static/css/leaders-main.css">
+		<link rel="stylesheet" href="./static/css/service-area-main.css">
 		<link rel="stylesheet" href="./static/css/icons.css">
 		<link rel="stylesheet" href="./static/css/jquery.gmaps.css">
 		<link rel="stylesheet" href="./static/css/header-main.css">
@@ -19,38 +20,43 @@
 			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 			crossorigin="anonymous">
 		</script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 		<script type="text/javascript" src="./static/js/main.js"></script>
 	</head>
 <body>
 	<div id="super" class="hidden">
 		<div id="login">
-			<h2>Iniciar Sesión</h2>
+			<div id="help">
+				<i id="back-login" class="icon-chevron-thin-left remember-see"></i>
+				<h2 id="title-login">Iniciar Sesión</h2>
+			</div>
 			<div id="container-login">
-				<div data-validate="">
+				<div id="user">
 					<span>Usuario</span>
 					<input type="text" id="username" placeholder="Ejemplo@email.com">
 				</div>
 
-				<div data-validate="">
+				<div id="password">
 					<span>Contraseña</span>
 					<input type="password" id="pass" placeholder="Segura">
 				</div>
 
+				<p id="remember-text"></p>
 				<button id="send">Entrar</button>
-				<p id="remember">¿Olvidó su contraseña?</p>
+				<p class="remember-see" id="remember">¿Olvidó su contraseña?</p>
 			</div>
 		</div>
 	</div>
 
 	<header>
 		<div id="logo">
-			<img src="./static/img/imagotipo.png" alt="">
+			<a href="./landing.php"><img src="./static/img/imagotipo.png" alt=""></a>
 		</div>
 		<div id="menu">
 			<ul>
-				<li>Quienes Somos</li>
-				<li>Puntos de Conexion</li>
-				<li>Departamentos</li>
+				<li><a class="anchor" href="#about">Quienes Somos</a></li>
+				<li><a class="anchor" href="#leaders">Nuestro Equipo</a></li>
+				<li><a class="anchor" href="#connection-points">Puntos de Conexión</a></li>
 				<li id="login-menu" onclick="javascript:login();">Ingresar</li>
 			</ul>
 		</div>
@@ -87,7 +93,7 @@
 			</div>
 			
 			<div id="leaders">
-				<h2 id="title-leaders">Nuestro Equipo</h2>
+				<h2 id="title-leaders">NUESTRO EQUIPO</h2>
 				<div id="list">
 					<div class="people">
 						<div class="img">
@@ -123,7 +129,45 @@
 			</div>
 
 			<div id="connection-points">
-				<h2 id="title-connection-points">Puntos de Conexión</h2>
+				<h2 id="title-connection-points">PUNTOS DE CONEXIÓN</h2>
+
+				<p id="text-connection-points">Es nuestra pasión llevar el mensaje de la verdad a todos los rincones de nuestra ciudad, por ello Amor de Cristo semana tras semana está presente en distintos lugares en los que nuestras Redes se reunen para compartir y disfrutar un momento contigo. Estos son nuestros puntos de Conexión:</p>
+
+				<div id="img-connection">
+					<img id="image-map" src="./static/img/mapa.png" alt="Mapa de puntos de conexión">
+				</div>
+			</div>
+
+			<div id="service-area">
+				<h2 id="title-service-area">ÁREAS DE SERVICIO</h2>
+
+				<p id="text-service-area">Conocémos que la mejor decisión que podemos tomar al momento de seguir a Jesús es servirle, por ello Nuestra casa tiene diversas areas y de ellas tú puedes ser parte.</p>
+
+				<div id="areas">
+					<a href="">
+						<div class="area" id="praise">
+							<span>ALABANZA, DANZA Y MULTIMEDIA</span>
+						</div>
+					</a>
+
+					<a href="">
+						<div class="area" id="server">
+							<span>SERVIDORES</span>
+						</div>
+					</a>
+
+					<a href="">
+						<div class="area" id="master">
+							<span>MAESTROS</span>
+						</div>
+					</a>
+
+					<a href="">
+						<div class="area" id="other">
+							<span>OTROS</span>
+						</div>
+					</a>
+				</div>
 			</div>
 		</div>
 		
@@ -145,38 +189,43 @@
 					</div>
 					<p>Cumplimos el mandato de nuestro señor Jesucristo "Por tanto id y haced discipulos..." Mateo 28:19; para este objetivo Ganamos, Consolidamos y Enviamos, Transformando la Sociedad con valores biblicos.</p>
 					<div id="links">
-						<div>
-							<img src="./static/img/facebook.svg" alt="facebook">
-						</div>
-						<div>
-							<img src="./static/img/instagram.svg" alt="facebook">
-						</div>
-						<div>
-							<img src="./static/img/youtube.svg" alt="facebook">
-						</div>
-						<div>
-							<img src="./static/img/twitter.svg" alt="facebook">
-						</div>
-						<div>
-							<img src="./static/img/google+.svg" alt="facebook">
-						</div>
+						<a href="https://www.facebook.com/AmordeCristoCienaga/" target="_blank">
+							<div>
+								<img src="./static/img/facebook.svg" alt="Facebook">
+							</div>
+						</a>
+						<a href="https://www.instagram.com/amordecristo_cienaga/" target="_blank">
+							<div>
+								<img src="./static/img/instagram.svg" alt="Instagram">
+							</div>
+						</a>
+						<a href="https://www.youtube.com/channel/UCAzsCmNAWZOqKZQDU19-lTw" target="_blank">
+							<div>
+								<img src="./static/img/youtube.svg" alt="Youtube">
+							</div>
+						</a>
+						<a href="https://twitter.com/amordecristo_c" target="_blank">
+							<div>
+								<img src="./static/img/twitter.svg" alt="Twitter">
+							</div>
+						</a>
 					</div>
 				</div>
 				<div id="info">
 					<div id="menu-info">
-						<h3>enlaces rápidos</h3>
+						<h3>Enlaces rápidos</h3>
 						<ul>
-							<li><span>-</span> Quienes Somos</li>
-							<li><span>-</span> Puntos de Conexión</li>
-							<li><span>-</span> Departamentos</li>
+							<li><span>-</span> <a class="anchor" href="#about">Quienes Somos</a></li>
+							<li><span>-</span> <a class="anchor" href="#leaders">Nuestro Equipo</a></li>
+							<li><span>-</span> <a class="anchor" href="#connection-points">Puntos de Conexión</a></li>
 						</ul>
 					</div>
 
 					<div id="service-info">
 						<h3>Nuestros Servicios</h3>
 						<ul>
-							<li>Viernes 7:00 p.m. (UTC-5)</li>
 							<li>Domingo 8:00 a.m. (UTC-5)</li>
+							<li>Viernes 7:00 p.m. (UTC-5)</li>
 						</ul>
 					</div>
 				</div>
@@ -203,7 +252,7 @@
 				</div>
 			</div>
 			<div id="fdown">
-				<span>© 2019 Amor de Cristo-Ciénaga</span> <span>All rights reserved | Privacy Policy</span>
+				<span>© 2019 Amor de Cristo</span> <span>Todos los derechos reservados</span>
 			</div>
 		</footer>
 	</div>

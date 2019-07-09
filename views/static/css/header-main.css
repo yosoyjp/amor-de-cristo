@@ -1,5 +1,5 @@
 header{
-	position: fixed;
+	position: absolute;
 	background: rgba(255, 255, 255, 0.4);
 	width: 100%;
 	top: 0;
@@ -18,7 +18,11 @@ header{
 	transition: all 200ms ease;
 }
 
-#logo > img{
+#logo > a{
+	height: 100%
+}
+
+#logo > a > img{
 	height: 100%;
 }
 
@@ -40,6 +44,10 @@ header{
 	border: solid 2px transparent;
 	border-radius: 5px;
 	font-size: 1.2rem;
+}
+
+#menu > ul > li > a{
+	color: black;
 }
 
 #menu > ul > li#login-menu{
