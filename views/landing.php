@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="./static/css/icons.css">
 		<link rel="stylesheet" href="./static/css/jquery.gmaps.css">
 		<link rel="stylesheet" href="./static/css/header-main.css">
+		<link rel="stylesheet" href="./static/css/preach-main.css">
 		<link rel="stylesheet" href="./static/css/form-main.css">
 
 		<script
@@ -125,6 +126,28 @@
 				</div>
 				<div id="see">
 					<i class="icon-plus"></i>
+				</div>
+			</div>
+
+			<div id="preach">
+				<div id="img-preach">
+					<div id="marco"></div>
+					<img src="./static/img/preach.jpg" alt="">
+				</div>
+				<a href="">
+					<div id="text-preach">
+						<div>
+							<h3>"TODOS TENEMOS ALGO QUE DAR"</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores facilis officiis natus! Accusantium facere labore ea iusto tempora voluptatem cumque molestias neque in corporis incidunt, saepe quidem quibusdam! Doloremque, nemo.</p>
+							<span>P. Carlos Alvarez</span>
+						</div>
+					</div>
+				</a>
+
+				<div id="separator">
+					<hr>
+					<div></div>
+					<hr>
 				</div>
 			</div>
 

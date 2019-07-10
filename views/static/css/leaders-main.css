@@ -70,8 +70,8 @@ div#leaders{
 	border-radius: 50%;
 	display: inline-flex;
 	font-size: 3rem;
-	background: black;
-	color: white;
+	background: white;
+	color: black;
 	padding: 10px;
 	transition: all 100ms ease-out;
 }
