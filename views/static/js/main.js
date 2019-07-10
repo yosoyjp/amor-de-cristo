@@ -86,7 +86,6 @@ $('#image-map').ready(function(){
     });
 });
 
-
 // Funcion para recuperar cuenta
 function remember_see(v){
     if(v == false){

@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="./static/css/jquery.gmaps.css">
 		<link rel="stylesheet" href="./static/css/header-main.css">
 		<link rel="stylesheet" href="./static/css/preach-main.css">
+		<link rel="stylesheet" href="./static/css/shedule-main.css">
 		<link rel="stylesheet" href="./static/css/form-main.css">
 
 		<script
@@ -190,6 +191,57 @@
 							<span>OTROS</span>
 						</div>
 					</a>
+				</div>
+			</div>
+
+			<div id="shedule">
+				<h2 id="title-shedule">AGENDA</h2>
+					
+				<div id="next">
+					<div id="img-next">
+						<img id="src-img-next" src="./static/img/next.jpg" alt="">
+					</div>
+					<div id="text-next">
+						<span id="title-next-event">Servicio Juvenil</span>
+						<span id="date-next-event">JUL 21, 2019 - 6:45 p.m.</span>
+					</div>
+				</div>
+				<div id="all-events">
+					<div class="event">
+						<img class="img-event" src="./static/img/event-1.jpg" alt="">
+						<span class="title-event">Fiesta de Primicias</span>
+						<span class="date-event">FEB 2, 2019 - 5:00 p.m.</span>
+					</div>
+
+					<div class="event">
+						<img class="img-event" src="./static/img/event-1.jpg" alt="">
+						<span class="title-event">Fiesta de Primicias</span>
+						<span class="date-event">FEB 2, 2019 - 5:00 p.m.</span>
+					</div>
+
+					<div class="event">
+						<img class="img-event" src="./static/img/event-1.jpg" alt="">
+						<span class="title-event">Fiesta de Primicias</span>
+						<span class="date-event">FEB 2, 2019 - 5:00 p.m.</span>
+					</div>
+
+					<div class="event">
+						<img class="img-event" src="./static/img/event-1.jpg" alt="">
+						<span class="title-event">Fiesta de Primicias</span>
+						<span class="date-event">FEB 2, 2019 - 5:00 p.m.</span>
+					</div>
+
+					<div class="event">
+						<img class="img-event" src="./static/img/event-1.jpg" alt="">
+						<span class="title-event">Fiesta de Primicias</span>
+						<span class="date-event">FEB 2, 2019 - 5:00 p.m.</span>
+					</div>
+
+					<div class="event">
+						<img class="img-event" src="./static/img/event-1.jpg" alt="">
+						<span class="title-event">Fiesta de Primicias</span>
+						<span class="date-event">FEB 2, 2019 - 5:00 p.m.</span>
+					</div>
 				</div>
 			</div>
 		</div>

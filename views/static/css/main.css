@@ -10,6 +10,14 @@
     font-family: "comfortaa-Light";
     src: url("../fonts/Comfortaa-Light.ttf")
 }
+@font-face{
+    font-family: "big john";
+    src: url("../fonts/Big-john.ttf");
+}
+@font-face{
+    font-family: "slim joe";
+    src: url("../fonts/Slim-joe.ttf");
+}
 
 *{
 	margin: 0;

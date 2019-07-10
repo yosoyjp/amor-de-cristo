@@ -1,16 +1,6 @@
-@font-face{
-    font-family: "big john";
-    src: url("../fonts/Big-john.ttf");
-}
-@font-face{
-    font-family: "slim joe";
-    src: url("../fonts/Slim-joe.ttf");
-}
-
 #service-area{
 	width: 100%;
-	min-height: 200px;
-	padding-bottom: 100px;
+	padding-bottom: 60px;
 }
 
 #title-service-area{
