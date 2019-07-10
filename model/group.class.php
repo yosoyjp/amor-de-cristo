@@ -21,16 +21,14 @@
                 die($e->getMessage());
             }
         }
-     
+
         public function findAlls()
         {
             try
             {
-                $result = array();
-     
                 $stm = $this->pdo->prepare("SELECT * FROM ".self::TABLE);
                 $stm->execute();
-     
+
                 return $stm->fetchAll(PDO::FETCH_OBJ);
             }
             catch(Exception $e)
@@ -62,27 +60,27 @@
                 $stm = $this->pdo
                             ->prepare("DELETE FROM ".self::TABLE." WHERE id = ?");			          
      
-                $stm->execute(array($id));
+                return $stm->execute(array($id));
             } catch (Exception $e) 
             {
                 die($e->getMessage());
             }
         }
      
-        public function update($data){
+        public function update($id, $name, $netId){
             try 
             {
                 $sql = "UPDATE ".self::TABLE." SET 
                             name      		= ?,
-                            netId          = ?,
+                            netId          = ?
                         WHERE id = ?";
      
-                $this->pdo->prepare($sql)
+                return $this->pdo->prepare($sql)
                      ->execute(
                         array(
-                            $data->name, 
-                            $data->netId,
-                            $data->id
+                            $name, 
+                            $netId,
+                            $id
                         )
                     );
             } catch (Exception $e) 
@@ -91,17 +89,17 @@
             }
         }
      
-        public function create(User $data){
+        public function create($name, $netId){
             try 
             {
             $sql = "INSERT INTO ".self::TABLE." (name, netId) 
-                    VALUES (?, ?,)";
+                    VALUES (?, ?)";
      
-            $this->pdo->prepare($sql)
+            return $this->pdo->prepare($sql)
                  ->execute(
                     array(
-                         $data->name, 
-                        $data->netId
+                         $name, 
+                        $netId
                     )
                 );
             } catch (Exception $e) 

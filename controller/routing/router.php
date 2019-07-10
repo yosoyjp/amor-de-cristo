@@ -3,12 +3,16 @@ class Router {
 	protected $requestUri;
 	protected $postroutes;
 	protected $getroutes;
+	protected $putroutes;
+	protected $deleteroutes;
 
 	const GET_PARAMS_DELIMITER = '?';
 	public function __construct($requestUri)
 	{
 		$this->postRoutes = [];
 		$this->getRoutes = [];
+		$this->putRoutes = [];
+		$this->deleteRoutes = [];
 		$this->setRequestUri($requestUri);
 	}
 	public function setRequestUri($requestUri)
@@ -33,6 +37,16 @@ class Router {
 		array_push($this->postRoutes, $route);
 	}
 
+	public function put($uri, $closure){
+		$route = new Route($uri, $closure, false);
+		array_push($this->putRoutes, $route);
+	}
+
+	public function delete($uri, $closure){
+		$route = new Route($uri, $closure, false);
+		array_push($this->deleteRoutes, $route);
+	}
+
 	public function run($method){
 		$response = false;
 		$requestUri = $this->getRequestUri();
@@ -55,9 +69,25 @@ class Router {
 					}
 				}
 				break;
+			case 'PUT':
+				foreach ($this->putRoutes as $route){
+					if ($route->checkIfMatch($requestUri)){
+						$response = $route->execute();
+						break;
+					}
+				}
+				break;
+			case 'DELETE':
+				foreach ($this->deleteRoutes as $route){
+					if ($route->checkIfMatch($requestUri)){
+						$response = $route->execute();
+						break;
+					}
+				}
+				break;
 			default:
 				header("HTTP/1.0 404 Not Found");
-				exit('404');
+				//exit('404');
 				break;
 		}
 		$this->sendResponse($response);
@@ -69,6 +99,7 @@ class Router {
 				echo $response;
 			}
 			else if (is_array($response) OR is_object($response)){
+				//ESTA DEVOLVIENDO 404 CUANDO EL JSON ESTA VACIO
 				header("Content-Type: application/json; charset=UTF-8");
 				echo json_encode($response);
 			}

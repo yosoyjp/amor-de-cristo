@@ -63,8 +63,14 @@ $router->get($URL_DEV.'/', function (){
 // API
 
 $router->get($URL_DEV.'/groups', 'GroupController::getAlls');
+$router->post($URL_DEV.'/group', 'GroupController::newGroup');
+$router->put($URL_DEV.'/group', 'GroupController::updateGroup');
+$router->delete($URL_DEV.'/group', 'GroupController::deleteGroup');
+
 
 $router->get($URL_DEV.'/nets', 'NetController::getAlls');
-$router->post($URL_DEV.'/net', 'NetController::getAlls');
+$router->post($URL_DEV.'/net', 'NetController::newNet');
+$router->put($URL_DEV.'/net', 'NetController::updateNet');
+$router->delete($URL_DEV.'/net', 'NetController::deleteNet');
 
 $router->run($_SERVER["REQUEST_METHOD"]);

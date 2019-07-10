@@ -21,9 +21,7 @@
      
         public function findAlls()
         {
-            try
-            {
-                $result = array();
+            try{
      
                 $stm = $this->pdo->prepare("SELECT * FROM ".self::TABLE);
                 $stm->execute();
@@ -59,25 +57,25 @@
                 $stm = $this->pdo
                             ->prepare("DELETE FROM ".self::TABLE." WHERE id = ?");			          
      
-                $stm->execute(array($id));
+                return $stm->execute(array($id));
             } catch (Exception $e) 
             {
                 die($e->getMessage());
             }
         }
      
-        public function update($data){
+        public function update($id, $name){
             try 
             {
                 $sql = "UPDATE ".self::TABLE." SET 
-                            name      		= ?
+                            name = ?
                         WHERE id = ?";
      
-                $this->pdo->prepare($sql)
+            return $this->pdo->prepare($sql)
                      ->execute(
                         array(
-                            $data->name, 
-                            $data->id
+                            $name, 
+                            $id
                         )
                     );
             } catch (Exception $e) 
@@ -86,21 +84,20 @@
             }
         }
      
-        public function create(User $data){
+        public function create($name){
+            
             try 
             {
             $sql = "INSERT INTO ".self::TABLE." (name) 
-                    VALUES (?);
-                    SELECT LAST_INSERT_ID();
+                    VALUES (?)
                     ";
      
-            $stm = $this->pdo->prepare($sql)
+            return $this->pdo->prepare($sql)
                  ->execute(
                     array(
-                         $data->name
+                         $name
                     )
                 );
-            return $stm->fetch(PDO::FETCH_OBJ);
             } catch (Exception $e) 
             {
                 die($e->getMessage());
