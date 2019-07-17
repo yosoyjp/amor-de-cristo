@@ -1,0 +1,119 @@
+.hidden{
+	visibility: hidden;
+	height: 0px;
+}
+
+#super{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.visible{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1000;
+	background: rgba(0, 0, 0, .8);
+}
+
+#login{
+	width: 70%;
+	padding: 100px 0;
+	background: white;
+	margin: 40px 10%;
+	text-align: center;
+	border-radius: 8px;
+}
+
+#back-login{
+	font-size: 2rem;
+	margin-top: -8rem;
+	visibility: hidden;
+	color: #7979ff;
+	border: 2px solid #7979ff;
+	padding: 5px 7px 5px 3px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: transform 80ms ease;
+}
+
+#back-login:hover{
+	transform: scale(1.1);
+}
+
+#help{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 4rem;
+	overflow: hidden;
+}
+
+#title-login{
+	font-size: 2rem;
+	padding: 10px 0;
+}
+
+#container-login{
+	margin: 0px 10%;
+}
+
+#container-login > div{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin: 30px 0;
+	font-size: 1.2rem;
+}
+
+#container-login > div > span{
+	width: 18%;
+	margin-right: 12px;
+	text-align: right;
+}
+
+#container-login > div > input{
+	width: 50%;
+	font-size: 1.1rem;
+	padding: 10px 5px;
+	border: 1px solid #777777;
+	overflow: visible;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#container-login > div > input:focus{
+	outline: none;
+}
+
+#send{
+	font-size: 1.2rem;
+	padding: 15px 30px;
+	margin-top: 20px;
+	background-color: rgb(15, 39, 101);
+	color: white;
+	border: none;
+	border-radius: 2px;
+}
+
+#send:hover{
+	cursor: pointer;
+	background: rgb(86, 115, 191);
+}
+
+#send:active{
+	background: white;
+	color: rgb(15, 39, 101);
+}
+
+#remember{
+	margin-top: 10px;
+	color: rgb(15, 39, 101);
+	cursor: pointer;
+}

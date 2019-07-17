@@ -1,0 +1,120 @@
+#preach{
+	width: 100%;
+	height: 700px;
+	padding-top: 80px;
+	background: rgba(0,0,0,1);
+	background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 18%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(18%, rgba(0,0,0,1)), color-stop(78%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 18%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 18%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 18%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 18%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=0 );background: rgba(0,0,0,1);
+	background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 18%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(18%, rgba(0,0,0,1)), color-stop(78%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 18%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 18%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 18%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 18%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=0 );
+}
+
+#text-preach{
+	width: 80%;
+	height: 100%;
+	background: white;
+	display: flex;
+	align-items: center;
+}
+
+#text-preach > div{
+	background: white;
+	width: 55%;
+	margin-left: 5%;
+	padding: 30px;
+	border-top-right-radius: 80px;
+	border-bottom-left-radius: 80px;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	transition: all 400ms ease;
+	cursor: pointer;
+}
+
+#text-preach > div:hover{
+	background: rgb(50, 50, 50);
+	box-shadow: none;
+}
+
+#text-preach > div > h3{
+	color: rgb(10, 27, 71);
+	font-size: 2rem;
+	margin-bottom: 20px;
+}
+
+#text-preach > div:hover > h3{
+	color: white
+}
+
+#text-preach > div > p{
+	font-size: 1.4rem;
+	color: rgb(15, 39, 101);
+}
+
+#text-preach > div:hover > p{
+	color: white
+}
+
+#text-preach > div > span{
+	color: rgb(10, 27, 71);
+	display: block;
+	font-size: 1.6rem;
+	text-align: right;
+}
+
+#text-preach > div:hover > span{
+	color: white
+}
+
+#img-preach{
+	position: absolute;
+	margin-top: 80px;
+	right: 0;
+	width: 45%;
+	height: 540px;
+	background: blue;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+#img-preach > img{
+	height: 100%;
+}
+
+#img-preach > #marco{
+	position: absolute;
+	height: 90%;
+	width: 90%;
+	border: solid 2px white;
+}
+
+#separator{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#separator > hr{
+	width: 200px;
+	border: solid 1px black;
+}
+
+#separator > div{
+	width: 10px;
+	height: 10px;
+	margin: 0 10px;
+	background: black;
+	border-radius: 50%;
+}

@@ -1,6 +1,7 @@
 div#leaders{
 	width: 100%;
-	background: url(../img/leaders.jpg) no-repeat center center fixed;
+	background-color: black;
+	/*background: url(../img/leaders.jpg) no-repeat center center fixed;*/
 	background-size: cover;
 	padding-bottom: 40px;
 }
@@ -21,16 +22,18 @@ div#leaders{
 
 #list > .people{
 	max-width: 200px;
-	background: rgba(255, 255, 255, 0.8);
+	/*background: rgba(255, 255, 255, 0.8);*/
 	padding: 20px 0px;
 	margin: 0px 10px 20px;
 	border-radius: 2px;
 	transition: all 100ms ease-out;
+	color: white;
 }
 
 #list > .people:hover{
 	background: white;
 	cursor: pointer;
+	color: black;
 }
 
 #list > .people > .img{
@@ -50,12 +53,13 @@ div#leaders{
 
 #list > .people > .description > span{
 	display: block;
+	font-family: "comfortaa-Bold";
 	margin-top: 8px;
 }
 
 #list > .people > .description > span.name{
-	font-weight: 600;
-	font-size: 1.2rem;
+	font-family: "comfortaa-Light";
+	font-size: 1.1rem;
 }
 
 #see{
