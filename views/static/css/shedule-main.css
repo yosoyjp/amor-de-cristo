@@ -40,12 +40,33 @@
 }
 
 #all-events{
-	min-height: 100px;
 	display: flex;
 	align-items: center;
+	justify-content: center;
+}
+
+#all-events > i{
+	font-size: 2.5rem;
+	padding: 5px 5px;
+	border-radius: 50%;
+	color: transparent;
+	transition: all 200ms ease;
+}
+
+#all-events > i.activ{
+	color: rgb(115, 115, 115);
+}
+
+#all-events > i.activ:hover{
+	cursor: pointer;
+	color: white;
+	background: rgb(115, 115, 115);
+}
+
+#list-events{
 	overflow: hidden;
-	padding: 5px 20px;
-	width: calc(100% - 40px);
+	display: flex;
+	margin: 0 5px;
 }
 
 .event{
@@ -68,7 +89,7 @@
 }
 
 .img-event{
-	height: 140px;
+	width: 260px;
 }
 
 .title-event{

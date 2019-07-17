@@ -42,6 +42,14 @@
 	background-image: url(../img/praise.jpg);
 }
 
+.area#dance{
+	background-image: url(../img/dance.jpg);
+}
+
+.area#multimedia{
+	background-image: url(../img/multimedia.jpg);
+}
+
 .area#server{
 	background-image: url(../img/server.jpg);
 }

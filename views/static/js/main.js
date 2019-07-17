@@ -1,22 +1,7 @@
 $(document).ready(function(){
 	var heightWindow = $(window).height();
 	$("#elements").css('margin-top', heightWindow);
-
- //    var scroll;
- //    $(window).scroll(function(){
- //        scroll = $(window).scrollTop();
- //        var action = parseFloat($(window).height())-parseFloat('80px');
- //        if(scroll < action){
- //            $('#logo').css({'height': '110px', 'margin': '15px 0px', 'width': '40%'});
- //            $("#menu").fadeIn(100);
- //            $("header").css({'background': 'rgba(255, 255, 255, 0.4)', 'border-bottom': 'none'});
- //        }else{
- //            $('#menu').fadeOut(100);
- //            $('#logo').css({'height': '70px', 'margin': '5px 0px', 'width': '28%'});
- //            $("header").css({'background': 'white', 'border-bottom': 'solid 2px rgb(199, 199, 199)'});
- //        }
- //    });
-
+    
     //margen de altura de seccion superior del footer
     var heightfup = parseFloat($('#fup').height()/2);
     $('#fup').css({'margin-top': '-' + heightfup +'px'});
@@ -28,12 +13,11 @@ $(document).ready(function(){
         var strAncla=$(this).attr('href');
             $('body,html').stop(true,true).animate({                
                 scrollTop: $(strAncla).offset().top
-            },1000);
-        
+            },1000); 
     });
 
     document.onmousemove = function(e) {
-        var x = e.clientX/20;
+        var x = e.clientX - 200;
         $('#areas').scrollLeft(x);
     };
 
