@@ -1,20 +1,24 @@
 <?
-	require 'model/group.class.php';
+	require 'model/net.class.php';
 
-	class GroupController{
+	class NetController{
+
+		private $model;
+
+		public function __CONSTRUCT(){
+	        $this->model = new Net();
+	    }
 
 		public function getAlls(){
-			$group = new Group();
-			return $group->findAlls();
+			$net = new Net();
+			return $net->findAlls();
 		}
 
-		public function newGroup(){
-			$data = json_decode(file_get_contents('php://input'), true);
-			$name = $data['name'];
-			$netId = $data['netId'];
-			if(isset($name, $netId)){
-				$group = new Group();
-				return $group->create($name, $netId);	
+		public function newNet(){
+			$name = json_decode(file_get_contents('php://input'), true)['name'];
+			if(isset($name)){
+				$net = new Net();
+				return $net->create($name);	
 			}else{
 				header('HTTP/1.0 404 Not Found');
 				return json_decode('{"error": "Rellene toda la informacion"}');
@@ -22,25 +26,24 @@
 			
 		}
 
-		public function updateGroup(){
+		public function updateNet(){
 			$data = json_decode(file_get_contents('php://input'), true);
 			$id = $data['id'];
 			$name = $data['name'];
-			$netId = $data['netId'];
-			if(isset($id, $name, $netId)){
-				$group = new Group();
-				return $group->update($id, $name, $netId);
+			if(isset($id, $name)){
+				$net = new Net();
+				return $net->update($id, $name);
 			}else{
 				header('HTTP/1.0 404 Not Found');
 				return json_decode('{"error": "Rellene toda la informacion"}');
 			}
 		}
 
-		public function deleteGroup(){
+		public function deleteNet(){
 			$id = json_decode(file_get_contents('php://input'), true)['id'];
 			if(isset($id)){
-				$group = new Group();
-				return $group->delete($id);
+				$net = new Net();
+				return $net->delete($id);
 			}else{
 				header('HTTP/1.0 404 Not Found');
 				return json_decode('{"error": "Rellene toda la informacion"}');

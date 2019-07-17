@@ -2,18 +2,18 @@
 require './controller/routing/router.php';
 require './controller/routing/route.php';
 
-// require 'ProductsController.php';
-
+require './controller/group.controller.php';
+require './controller/net.controller.php';
+require './model/database.class.php';
 
 
 $URL_DEV = '/amordecristo.com.co';
-
-
-//echo $ruta[count($ruta)-1];
+//echo $_SERVER["REQUEST_METHOD"];
 
 $router = new Router($_SERVER['REQUEST_URI']);
 
-$router->add($URL_DEV.'/static/:type/:file', function($type, $file){
+//Server file statics;
+$router->get($URL_DEV.'/static/:type/:file', function($type, $file){
 	$ruta = explode('/', $_SERVER['REQUEST_URI']);
 
 	$fileArray = explode('.', $file);
@@ -58,18 +58,22 @@ $router->add($URL_DEV.'/static/:type/:file', function($type, $file){
 	return readfile('./views/static/'.$type.'/'.$file);
 });
 
-$router->add($URL_DEV.'/', function ()
-{
+$router->get($URL_DEV.'/', function (){
 	return require ('./views/landing.php');
 });
 
-// $router->add('/productos', 'ProductsController::index');
-// $router->add('/productos/:name', 'ProductsController::show');
 
-// /ruta/con/un/monton/de/parametros
-$router->add('/:a/:b/:c/:d/:e/:f', function ($a, $b, $c, $d, $e, $f)
-{
-	return "$a<br>$b<br>$c<br>$d<br>$e<br>$f";
-});
+// API
 
-$router->run();
+$router->get($URL_DEV.'/groups', 'GroupController::getAlls');
+$router->post($URL_DEV.'/group', 'GroupController::newGroup');
+$router->put($URL_DEV.'/group', 'GroupController::updateGroup');
+$router->delete($URL_DEV.'/group', 'GroupController::deleteGroup');
+
+
+$router->get($URL_DEV.'/nets', 'NetController::getAlls');
+$router->post($URL_DEV.'/net', 'NetController::newNet');
+$router->put($URL_DEV.'/net', 'NetController::updateNet');
+$router->delete($URL_DEV.'/net', 'NetController::deleteNet');
+
+$router->run($_SERVER["REQUEST_METHOD"]);

@@ -1,13 +1,14 @@
 <?php
 
-    $table = 'groups';
-
     class Group{
         private $pdo;
         
+        const TABLE = 'groups';
+
         public $id;
         public $name;
         public $netId;
+        public $members;
      
         public function __CONSTRUCT()
         {
@@ -20,16 +21,14 @@
                 die($e->getMessage());
             }
         }
-     
+
         public function findAlls()
         {
             try
             {
-                $result = array();
-     
-                $stm = $this->pdo->prepare("SELECT * FROM ".$table);
+                $stm = $this->pdo->prepare("SELECT * FROM ".self::TABLE);
                 $stm->execute();
-     
+
                 return $stm->fetchAll(PDO::FETCH_OBJ);
             }
             catch(Exception $e)
@@ -43,7 +42,7 @@
             try 
             {
                 $stm = $this->pdo
-                          ->prepare("SELECT * FROM {$table} WHERE id = ?");
+                          ->prepare("SELECT * FROM ".self::TABLE." WHERE id = ?");
                           
      
                 $stm->execute(array($id));
@@ -59,29 +58,29 @@
             try 
             {
                 $stm = $this->pdo
-                            ->prepare("DELETE FROM {$table} WHERE id = ?");			          
+                            ->prepare("DELETE FROM ".self::TABLE." WHERE id = ?");			          
      
-                $stm->execute(array($id));
+                return $stm->execute(array($id));
             } catch (Exception $e) 
             {
                 die($e->getMessage());
             }
         }
      
-        public function update($data){
+        public function update($id, $name, $netId){
             try 
             {
-                $sql = "UPDATE {$table} SET 
+                $sql = "UPDATE ".self::TABLE." SET 
                             name      		= ?,
-                            netId          = ?,
+                            netId          = ?
                         WHERE id = ?";
      
-                $this->pdo->prepare($sql)
+                return $this->pdo->prepare($sql)
                      ->execute(
                         array(
-                            $data->name, 
-                            $data->netId,
-                            $data->id
+                            $name, 
+                            $netId,
+                            $id
                         )
                     );
             } catch (Exception $e) 
@@ -90,17 +89,17 @@
             }
         }
      
-        public function create(User $data){
+        public function create($name, $netId){
             try 
             {
-            $sql = "INSERT INTO ${table} (name, netId) 
-                    VALUES (?, ?,)";
+            $sql = "INSERT INTO ".self::TABLE." (name, netId) 
+                    VALUES (?, ?)";
      
-            $this->pdo->prepare($sql)
+            return $this->pdo->prepare($sql)
                  ->execute(
                     array(
-                         $data->name, 
-                        $data->netId
+                         $name, 
+                        $netId
                     )
                 );
             } catch (Exception $e) 
