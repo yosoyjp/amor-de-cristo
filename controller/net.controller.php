@@ -1,4 +1,4 @@
-<?
+<?php
 	require 'model/net.class.php';
 
 	class NetController{

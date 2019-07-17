@@ -1,4 +1,4 @@
-<?
+<?php
 	require 'model/group.class.php';
 
 	class GroupController{
