@@ -60,21 +60,18 @@
         }
      
         public function delete($id){
-            try 
-            {
+            try {
                 $stm = $this->pdo
                             ->prepare("DELETE FROM users WHERE id = ?");			          
      
                 $stm->execute(array($id));
-            } catch (Exception $e) 
-            {
+            } catch (Exception $e){
                 die($e->getMessage());
             }
         }
      
         public function update($data){
-            try 
-            {
+            try{
                 $sql = "UPDATE users SET 
                             name      		= ?,
                             surname          = ?, 
@@ -85,12 +82,11 @@
                 $this->pdo->prepare($sql)
                      ->execute(
                         array(
-                            $data->name, 
-                            $data->surname,                        
-                            $data->phone,
-                             $data->email,
-                            $data->password, 
-                            $data->id
+                            $data['name'], 
+                            $data['surname'],
+                            $data['phone'],
+                            $data['email'],
+                            $data['id']
                         )
                     );
             } catch (Exception $e) 
@@ -101,7 +97,7 @@
 
         //Pendiente hacer un update de contraseña
      
-        public function create(User $data){
+        public function create($data){
             try 
             {
             $sql = "INSERT INTO users (name, surname, phone, email, password) 
@@ -110,11 +106,11 @@
             $this->pdo->prepare($sql)
                  ->execute(
                     array(
-                        $data->name, 
-                        $data->surname,
-                        $data->phone, 
-                        $data->email, 
-                        $data->password
+                        $data['name'],
+                        $data['surname'],
+                        $data['phone'],
+                        $data['email'],
+                        $data['password']
                     )
                 );
             } catch (Exception $e) 
