@@ -1,0 +1,65 @@
+header{
+	position: absolute;
+	background: rgba(255, 255, 255, 0.4);
+	width: 100%;
+	top: 0;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+}
+
+#logo{
+	width: 40%;
+	height: 110px;
+	margin: 15px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 200ms ease;
+}
+
+#logo > a{
+	height: 100%
+}
+
+#logo > a > img{
+	height: 100%;
+}
+
+#menu{
+	height: 100%;
+	width: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+#menu > ul{
+	margin-right: 35px;
+}
+
+#menu > ul > li{
+	display: inline;
+	padding: 10px 5px;
+	border: solid 2px transparent;
+	border-radius: 5px;
+	font-size: 1.2rem;
+}
+
+#menu > ul > li > a{
+	color: black;
+}
+
+#menu > ul > li#login-menu{
+	background: white;
+	padding: 10px 8px;
+}
+
+#menu > ul > li:hover{
+	cursor: pointer;
+	border: solid 2px white;
+}
+
+#menu > ul > li#login:hover{
+	background: transparent;
+}

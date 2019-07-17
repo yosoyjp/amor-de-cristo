@@ -2,6 +2,22 @@
     font-family: "comfortaa";
     src: url("../fonts/Comfortaa-Regular.ttf")
 }
+@font-face{
+    font-family: "comfortaa-Bold";
+    src: url("../fonts/Comfortaa-Bold.ttf")
+}
+@font-face{
+    font-family: "comfortaa-Light";
+    src: url("../fonts/Comfortaa-Light.ttf")
+}
+@font-face{
+    font-family: "big john";
+    src: url("../fonts/Big-john.ttf");
+}
+@font-face{
+    font-family: "slim joe";
+    src: url("../fonts/Slim-joe.ttf");
+}
 
 *{
 	margin: 0;
@@ -16,6 +32,7 @@
 
 #section-one video{
 	position: fixed;
+	top: 0px;
     min-width: 100%;
     min-height: 100%;
     width: auto;
@@ -30,4 +47,8 @@
 
 #sections{
 	width: 100%;
+}
+
+a{
+	text-decoration: none;
 }
