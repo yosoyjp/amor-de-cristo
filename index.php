@@ -62,6 +62,10 @@ $router->get($URL_DEV.'/', function (){
 	return require ('./views/landing.php');
 });
 
+$router->get($URL_DEV.'/description', function (){
+	return require ('./views/description.php');
+});
+
 
 // API
 

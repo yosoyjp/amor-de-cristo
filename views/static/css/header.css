@@ -50,6 +50,10 @@ header{
 	color: black;
 }
 
+a{
+	text-decoration: none;
+}
+
 #menu > ul > li#login-menu{
 	background: white;
 	padding: 10px 8px;
