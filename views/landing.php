@@ -2,6 +2,7 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Amor de Cristo-Ciénaga | Inicio</title>
 
 		<link rel="stylesheet" href="./static/css/main.css">
@@ -11,7 +12,6 @@
 		<link rel="stylesheet" href="./static/css/leaders-main.css">
 		<link rel="stylesheet" href="./static/css/service-area-main.css">
 		<link rel="stylesheet" href="./static/css/icons.css">
-		<link rel="stylesheet" href="./static/css/jquery.gmaps.css">
 		<link rel="stylesheet" href="./static/css/header.css">
 		<link rel="stylesheet" href="./static/css/preach-main.css">
 		<link rel="stylesheet" href="./static/css/shedule-main.css">
@@ -27,12 +27,14 @@
 		<script type="text/javascript" src="./static/js/slide.js"></script>
 		<script type="text/javascript" src="./static/js/login.js"></script>
 		<script type="text/javascript" src="./static/js/footer.js"></script>
+		<script type="text/javascript" src="./static/js/menu.js"></script>
 	</head>
 	<body>
 		<div id="super" class="hidden">
 			<div id="login">
+				<i id="back-login" class="icon-chevron-left remember-see"></i>
+				<i class="icon-cross"></i>
 				<div id="help">
-					<i id="back-login" class="icon-chevron-thin-left remember-see"></i>
 					<h2 id="title-login">Iniciar Sesión</h2>
 				</div>
 				<div id="container-login">
@@ -55,7 +57,8 @@
 
 		<header>
 			<div id="logo">
-				<a href="./landing.php"><img src="./static/img/imagotipo.png" alt=""></a>
+				<a href="./landing.php" id="img-logo"><img src="./static/img/imagotipo.png" alt=""></a>
+				<a class="menu-btn" id="menu-btn"><i class="icon-menu icon"></i></a>
 			</div>
 			<div id="menu">
 				<ul>
@@ -77,12 +80,12 @@
 			<div id="sections">
 				<div id="about">
 					<div id="mision">
+		                <div class="imgAbout">
+		                    <img src="./static/img/mision.jpg" alt="">
+		                </div>
 		                <div class="contentAbout">
 		                    <h2 id="about">Nuestra Misión</h2>
 		                    <p id="textAbout">Cumplimos el mandato de nuestro señor Jesucristo "Por tanto id y haced discipulos..." Mateo 28:19; para este objetivo Ganamos, Consolidamos y Enviamos, Transformando la Sociedad con valores biblicos.</p>
-		                </div>
-		                <div class="imgAbout">
-		                    <img src="./static/img/mision.jpg" alt="">
 		                </div>
 		            </div>
 
@@ -99,31 +102,13 @@
 				
 				<div id="leaders">
 					<h2 id="title-leaders">NUESTRO EQUIPO</h2>
-					<div id="list">
+					<div id="list-leaders">
 						<div class="people">
 							<div class="img">
 								<img src="./static/img/pastor.jpg" alt="carlos Alvarez">
 							</div>
 							<div class="description">
 								<span class="position">Pastor</span>
-								<span class="name">Carlos Álvarez</span>
-							</div>
-						</div>
-						<div class="people">
-							<div class="img">
-								<img src="./static/img/pastora.jpg" alt="carlos Alvarez">
-							</div>
-							<div class="description">
-								<span class="position">Pastora</span>
-								<span class="name">Jackelin Ayola</span>
-							</div>
-						</div>
-						<div class="people">
-							<div class="img">
-								<img src="./static/img/carlos.jpg" alt="carlos Alvarez">
-							</div>
-							<div class="description">
-								<span class="position">Lider de Punto de Conexión</span>
 								<span class="name">Carlos Álvarez</span>
 							</div>
 						</div>
@@ -261,7 +246,7 @@
 								<span class="date-event">FEB 2, 2019 - 5:00 p.m.</span>
 							</div>
 						</div>
-						<i class="icon-chevron-right activ"></i>
+						<i class="icon-chevron-right"></i>
 					</div>
 				</div>
 			</div>
@@ -279,7 +264,7 @@
 				</div>
 				<div id="fmedium">
 					<div id="fus">
-						<div>
+						<div id="img-us">
 							<img src="./static/img/isotipo.png" alt="">
 						</div>
 						<p>Cumplimos el mandato de nuestro señor Jesucristo "Por tanto id y haced discipulos..." Mateo 28:19; para este objetivo Ganamos, Consolidamos y Enviamos, Transformando la Sociedad con valores biblicos.</p>

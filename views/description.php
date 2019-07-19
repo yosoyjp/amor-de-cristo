@@ -2,6 +2,7 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Areas de Servicio</title>
 
 		<link rel="stylesheet" href="./static/css/footer.css">
@@ -15,6 +16,7 @@
 		<script type="text/javascript" src="./static/js/description.js"></script>
 		<script type="text/javascript" src="./static/js/login.js"></script>
 		<script type="text/javascript" src="./static/js/footer.js"></script>
+		<script type="text/javascript" src="./static/js/menu.js"></script>
 	</head>
 	<body>
 		<div id="super" class="hidden">
@@ -43,7 +45,8 @@
 
 		<header>
 			<div id="logo">
-				<a href="./landing.php"><img src="./static/img/imagotipo.png" alt=""></a>
+				<a href="./" id="img-logo"><img src="./static/img/imagotipo.png" alt=""></a>
+				<a class="menu-btn" id="menu-btn"><i class="icon-menu icon"></i></a>
 			</div>
 			<div id="menu">
 				<ul>
@@ -81,6 +84,102 @@
 								<span id="name">Daniela de La Hoz</span>
 								<span id="ocupation">Lider</span>
 							</div>
+
+							<div id="people">
+								<div id="img-people">
+									<img src="./static/img/daniela-de-la-hoz.jpg" alt="">
+								</div>
+								<span id="name">Daniela de La Hoz</span>
+								<span id="ocupation">Lider</span>
+							</div>
+
+							<div id="people">
+								<div id="img-people">
+									<img src="./static/img/daniela-de-la-hoz.jpg" alt="">
+								</div>
+								<span id="name">Daniela de La Hoz</span>
+								<span id="ocupation">Lider</span>
+							</div>
+
+							<div id="people">
+								<div id="img-people">
+									<img src="./static/img/daniela-de-la-hoz.jpg" alt="">
+								</div>
+								<span id="name">Daniela de La Hoz</span>
+								<span id="ocupation">Lider</span>
+							</div>
+
+							<div id="people">
+								<div id="img-people">
+									<img src="./static/img/daniela-de-la-hoz.jpg" alt="">
+								</div>
+								<span id="name">Daniela de La Hoz</span>
+								<span id="ocupation">Lider</span>
+							</div>
+
+							<div id="people">
+								<div id="img-people">
+									<img src="./static/img/daniela-de-la-hoz.jpg" alt="">
+								</div>
+								<span id="name">Daniela de La Hoz</span>
+								<span id="ocupation">Lider</span>
+							</div>
+
+							<div id="people">
+								<div id="img-people">
+									<img src="./static/img/daniela-de-la-hoz.jpg" alt="">
+								</div>
+								<span id="name">Daniela de La Hoz</span>
+								<span id="ocupation">Lider</span>
+							</div>
+
+							<div id="people">
+								<div id="img-people">
+									<img src="./static/img/daniela-de-la-hoz.jpg" alt="">
+								</div>
+								<span id="name">Daniela de La Hoz</span>
+								<span id="ocupation">Lider</span>
+							</div>
+
+							<div id="people">
+								<div id="img-people">
+									<img src="./static/img/daniela-de-la-hoz.jpg" alt="">
+								</div>
+								<span id="name">Daniela de La Hoz</span>
+								<span id="ocupation">Lider</span>
+							</div>
+
+							<div id="people">
+								<div id="img-people">
+									<img src="./static/img/daniela-de-la-hoz.jpg" alt="">
+								</div>
+								<span id="name">Daniela de La Hoz</span>
+								<span id="ocupation">Lider</span>
+							</div>
+
+							<div id="people">
+								<div id="img-people">
+									<img src="./static/img/daniela-de-la-hoz.jpg" alt="">
+								</div>
+								<span id="name">Daniela de La Hoz</span>
+								<span id="ocupation">Lider</span>
+							</div>
+
+							<div id="people">
+								<div id="img-people">
+									<img src="./static/img/daniela-de-la-hoz.jpg" alt="">
+								</div>
+								<span id="name">Daniela de La Hoz</span>
+								<span id="ocupation">Lider</span>
+							</div>
+
+							<div id="people">
+								<div id="img-people">
+									<img src="./static/img/daniela-de-la-hoz.jpg" alt="">
+								</div>
+								<span id="name">Daniela de La Hoz</span>
+								<span id="ocupation">Lider</span>
+							</div>
 						</div>
 						<i class="icon-chevron-right"></i>
 					</div>
@@ -100,7 +199,7 @@
 				</div>
 				<div id="fmedium">
 					<div id="fus">
-						<div>
+						<div id="img-us">
 							<img src="./static/img/isotipo.png" alt="">
 						</div>
 						<p>Cumplimos el mandato de nuestro señor Jesucristo "Por tanto id y haced discipulos..." Mateo 28:19; para este objetivo Ganamos, Consolidamos y Enviamos, Transformando la Sociedad con valores biblicos.</p>

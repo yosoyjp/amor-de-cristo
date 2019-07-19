@@ -1,6 +1,23 @@
 $(document).ready(function(){
-	var heightWindow = $(window).height();
-	$("#elements").css('margin-top', heightWindow);
+    var width = $(window).width();
+    if(width > 767){
+        var heightWindow = $(window).height();
+        $("#elements").css('margin-top', heightWindow);
+    }else{
+        var heightHeader = $('#logo > a#img-logo > img').height();
+        $("#elements").css('margin-top', heightHeader + 10);
+    }
+
+    $(window).on('resize', function(){
+        var width = $(window).width();
+        if(width > 767){
+            var heightWindow = $(window).height();
+            $("#elements").css('margin-top', heightWindow);
+        }else{
+            var heightHeader = $('#logo > a#img-logo > img').height();
+            $("#elements").css('margin-top', heightHeader + 10);
+        }
+    });
     
     //Animacion para scroll hasta ancla
     $('a.anchor').click(function(e){               
@@ -15,4 +32,14 @@ $(document).ready(function(){
         var x = e.clientX - 200;
         $('#areas').scrollLeft(x);
     };
+
+    $('#see > i').click(function(e){
+        if($('#list-leaders').height() == 220){
+            $('#list-leaders').css({
+                height: 'auto'
+                });
+        }else{
+            $('#list-leaders').css({'height': '220px'});
+        }
+    });
 });

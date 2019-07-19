@@ -23,3 +23,20 @@
 #img-connection > img{
 	width: 100%;
 }
+
+@media only screen and (max-width: 767px){
+	#title-connection-points{
+		font-size: 1.8rem;
+		width: 100%;
+		padding-left: 0;
+		margin-left: 0;
+		text-align: center;
+	}
+
+	#text-connection-points{
+		width: 90%;
+		margin-left: 5%;
+		font-size: 1.4rem;
+		text-align: center;
+	}
+}

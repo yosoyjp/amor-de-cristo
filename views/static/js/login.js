@@ -18,6 +18,12 @@ $(document).ready(function(){
         }
     });
 
+    $('#login > i.icon-cross').click(function(){
+        visible = remember_see(visible);
+        hideSuper();
+    });
+
+
     //Funcion para salir de modal
     $(document).keyup(function(e){
         if(e.which==27) {
@@ -39,10 +45,10 @@ function remember_see(v){
     if(v == false){
         $('#password').slideUp();
         $('#title-login').animate({'margin-top': '-8rem'}, function(){
-            $('#back-login').css({'visibility': 'visible'});
+            $('#back-login').css({'display': 'block'});
             $('#title-login').text("");
+            $('#title-login').css({'display': 'inline-flex'});
             $('#title-login').append('&nbsp;&nbsp;Recuperar Cuenta');
-            $('#back-login').animate({'margin-top': '0rem'});
             $('#title-login').animate({'margin-top': '0rem'});
         });
         $('#send').text("Enviar");
@@ -55,7 +61,7 @@ function remember_see(v){
     }else{
         $('#password').slideDown();
         $('#title-login').animate({'margin-top': '-8rem'}, function(){
-            $('#back-login').css({'visibility': 'hidden'});
+            $('#back-login').css({'display': 'none'});
             $('#title-login').text("");
             $('#title-login').append('Iniciar Sesión');
             $('#title-login').animate({'margin-top': '0rem'});

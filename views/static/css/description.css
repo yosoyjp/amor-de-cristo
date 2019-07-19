@@ -112,17 +112,13 @@
 }
 
 #team-area > i{
-    color: white;
+    color: rgb(115, 115, 115);
     font-size: 2.5rem;
     padding: 5px;
     transition: all 100ms ease;
 }
 
-#team-area > i.activ{
-    color: rgb(115, 115, 115);
-}
-
-#team-area > i.activ:hover{
+#team-area > i:hover{
     cursor: pointer;
     color: white;
     background: rgb(115, 115, 115);
@@ -131,6 +127,10 @@
 #list-team-area{
     display: flex;
     overflow: auto;
+}
+
+#list-team-area::-webkit-scrollbar {
+    display: none;
 }
 
 #people{
