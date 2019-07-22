@@ -221,6 +221,17 @@ footer{
 		display: none;
 	}
 
+	#fup{
+		width: calc(100% - 20px);
+		margin-left: 0;
+		padding: 0 10px;
+		justify-content: center;
+	}
+
+	.fup-section{
+		margin: 15px 0;
+	}
+	
 	#info{
 		width: 100%;
 	}

@@ -120,11 +120,9 @@
 
 @media only screen and (max-width: 767px){
 	#preach{
+		margin-top: -1px;
 		height: auto;
-	}
-
-	#text-preach{
-		width: 100%;
+		padding-top: 60px;
 	}
 
 	#img-preach{
@@ -134,17 +132,41 @@
 		height: 300px;
 	}
 
-	#text-preach > div{
-		width: 90%;
-		font-size: 1.1rem;
-	}
-
 	#img-preach > img{
-		height: auto;
-		width: 100%;
+		height: 100%;
+		width: auto;
 	}
 
 	#img-preach > #marco{
 		display: none;
+	}
+
+	#text-preach{
+		width: 100%;
+		height: auto;
+	}
+	
+	#text-preach > div{
+		width: 90%;
+		margin: 5px;
+		font-size: 1.1rem;
+	}
+
+	#text-preach > div > span{
+		margin: 20px 0 0;
+		color: black;
+	}
+
+	#separator{
+		width: 60%;
+		margin-left: 20%;
+	}
+
+	#separator > div{
+		width: 20px;
+		height: 10px;
+		margin: 0 10px;
+		background: black;
+		border-radius: 50%;
 	}
 }
