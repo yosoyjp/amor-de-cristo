@@ -1,0 +1,162 @@
+@font-face{
+    font-family: "comfortaa";
+    src: url("../fonts/Comfortaa-Regular.ttf")
+}
+@font-face{
+    font-family: "comfortaa-Bold";
+    src: url("../fonts/Comfortaa-Bold.ttf")
+}
+@font-face{
+    font-family: "comfortaa-Light";
+    src: url("../fonts/Comfortaa-Light.ttf")
+}
+@font-face{
+    font-family: "big john";
+    src: url("../fonts/Big-john.ttf");
+}
+@font-face{
+    font-family: "slim Joe";
+    src: url("../fonts/Slim-joe.ttf");
+}
+@font-face{
+    font-family: "Tahu";
+    src: url("../fonts/Tahu.ttf");
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "comfortaa";
+}
+
+#menu > ul > li{    
+    transition: all 80ms ease;
+}
+
+#menu > ul > li#login-menu{
+    background: rgb(185, 185, 185);
+    padding: 10px 8px;
+}
+
+#menu > ul > li:hover{
+    border: solid 2px rgb(185, 185, 185);
+}
+
+#menu > ul > li#login-menu:hover{
+    border: 2px solid rgb(185, 185, 185);
+    background: transparent;
+}
+
+#sections{
+    margin-bottom: 80px;
+    width: 100%;
+}
+
+#description-area{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+#img-description-area{
+    width: 35%;
+    height: 600px;
+    clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
+    background-image: url(../img/dance.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#text-description-area{
+    width: 65%;
+}
+
+#text-description-area > h2{
+    font-size: 3rem;
+    font-family: "slim joe";
+    margin-bottom: 20px;
+    margin-left: 10%;
+}
+
+#text-description-area > p{
+    font-size: 1.2rem;
+    width: 80%;
+    margin-left: 10%;
+}
+
+#text-description-area > span{
+    display: block;
+    font-size: 3.5rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    font-family: "tahu";
+    color: rgb(115, 115, 115);
+}
+
+#container-team-area{
+    margin-bottom: 150px
+}
+
+#container-team-area > h2{
+    font-size: 2rem;
+    font-family: "slim joe";
+    margin: 60px;
+    margin-bottom: 20px
+}
+
+#team-area{
+    display: flex;
+    align-items: center;
+}
+
+#team-area > i{
+    color: rgb(115, 115, 115);
+    font-size: 2.5rem;
+    padding: 5px;
+    transition: all 100ms ease;
+}
+
+#team-area > i:hover{
+    cursor: pointer;
+    color: white;
+    background: rgb(115, 115, 115);
+}
+
+#list-team-area{
+    display: flex;
+    overflow: auto;
+}
+
+#list-team-area::-webkit-scrollbar {
+    display: none;
+}
+
+#people{
+    text-align: center;
+    padding: 7px;
+    transition: all 100ms ease;
+    border-radius: 4px;
+}
+
+#img-people{
+    height: 130px;
+}
+
+#img-people > img{
+    height: 100%;
+    border-radius: 50%;
+}
+
+span#name{
+    display: block;
+    font-family: "comfortaa-Bold";
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+span#ocupation{
+    display: block;
+    font-size: 1.1rem;
+}

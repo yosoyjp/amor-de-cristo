@@ -28,20 +28,11 @@
 	border-radius: 8px;
 }
 
-#back-login{
+#login > i.icon-cross{
+	position: absolute;
+	top: 15px;
+	right: 15px;
 	font-size: 2rem;
-	margin-top: -8rem;
-	visibility: hidden;
-	color: #7979ff;
-	border: 2px solid #7979ff;
-	padding: 5px 7px 5px 3px;
-	border-radius: 50%;
-	cursor: pointer;
-	transition: transform 80ms ease;
-}
-
-#back-login:hover{
-	transform: scale(1.1);
 }
 
 #help{
@@ -50,6 +41,15 @@
 	justify-content: center;
 	height: 4rem;
 	overflow: hidden;
+}
+
+#back-login{
+	position: absolute;
+	display: none;
+	top: 15px;
+	left: 15px;
+	font-size: 2rem;
+	transition: transform 80ms ease;
 }
 
 #title-login{
@@ -71,7 +71,6 @@
 }
 
 #container-login > div > span{
-	width: 18%;
 	margin-right: 12px;
 	text-align: right;
 }
@@ -116,4 +115,39 @@
 	margin-top: 10px;
 	color: rgb(15, 39, 101);
 	cursor: pointer;
+	width: 100%;
+}
+
+@media only screen and (max-width: 767px){
+	#login{
+		border-radius: 0;
+		width: 100%;
+		margin: 0;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 0;
+	}
+
+	#title-login{
+		width: 100%;
+		text-align: center;
+	}
+
+	#container-login{
+		width: 100%;
+	}
+
+	#container-login > div{
+		width: 80%;
+		display: block;
+		text-align: left;
+		margin: 10px 10%;
+	}
+
+	#container-login > div > input{
+		width: calc(100% - 10px);
+	}
 }

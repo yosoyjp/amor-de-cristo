@@ -14,50 +14,59 @@ div#leaders{
 	font-weight: 200;
 }
 
-#list{
-	display: inline-flex;
+#list-leaders{
+	display: flex;
+	overflow: hidden;
 	padding: 0px 10px;
-	width: calc(100% - 20px);
+	width: calc(98% - 20px);
+	transition: all 100ms ease;
+	flex-wrap: wrap;
+	justify-content: center;
+	height: 220px;
 }
 
-#list > .people{
+#list-leaders::-webkit-scrollbar{
+	display: none;
+}
+
+#list-leaders > .people{
+	min-width: 200px;
 	max-width: 200px;
-	/*background: rgba(255, 255, 255, 0.8);*/
-	padding: 20px 0px;
-	margin: 0px 10px 20px;
+	padding: 10px 0px;
+	margin: 0px 5px 20px;
 	border-radius: 2px;
 	transition: all 100ms ease-out;
 	color: white;
 }
 
-#list > .people:hover{
+#list-leaders > .people:hover{
 	background: white;
 	cursor: pointer;
 	color: black;
 }
 
-#list > .people > .img{
-	width: 80%;
-	margin-left: 10%;
+#list-leaders > .people > .img{
+	width: 90%;
+	margin-left: 5%;
 	height: auto;
 }
 
-#list > .people > .img > img{
+#list-leaders > .people > .img > img{
 	width: 100%;
 	border-radius: 50%;
 }
 
-#list > .people > .description{
+#list-leaders > .people > .description{
 	text-align: center;
 }
 
-#list > .people > .description > span{
+#list-leaders > .people > .description > span{
 	display: block;
 	font-family: "comfortaa-Bold";
 	margin-top: 8px;
 }
 
-#list > .people > .description > span.name{
+#list-leaders > .people > .description > span.name{
 	font-family: "comfortaa-Light";
 	font-size: 1.1rem;
 }
@@ -79,4 +88,19 @@ div#leaders{
 #see:hover{
 	cursor: pointer;
 	transform: scale(1.2);
+}
+
+@media only screen and (max-width: 767px){
+	#title-leaders{
+		font-size: 2rem;
+		margin: 10px 0;
+		padding: 20px 0 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	#list-leaders > .people{
+		min-width: 120px;
+		max-width: 120px;
+	}
 }
