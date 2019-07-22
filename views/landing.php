@@ -31,9 +31,11 @@
 	</head>
 	<body>
 		<div id="super" class="hidden">
-			<div id="login">
+			<div id="buttons">
 				<i id="back-login" class="icon-chevron-left remember-see"></i>
-				<i class="icon-cross"></i>
+				<i id="close-login" class="icon-cross"></i>
+			</div>
+			<div id="login">
 				<div id="help">
 					<h2 id="title-login">Iniciar Sesión</h2>
 				</div>

@@ -28,11 +28,25 @@
 	border-radius: 8px;
 }
 
-#login > i.icon-cross{
+#buttons{
 	position: absolute;
-	top: 15px;
-	right: 15px;
+	width: 66%;
+	padding: 0 16%;
+	top: 14%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#buttons > i{
 	font-size: 2rem;
+	transition: transform 80ms ease;
+}
+
+i#back-login{
+	visibility: hidden;
+	right: auto;
+	left: 15px;
 }
 
 #help{
@@ -41,15 +55,6 @@
 	justify-content: center;
 	height: 4rem;
 	overflow: hidden;
-}
-
-#back-login{
-	position: absolute;
-	display: none;
-	top: 15px;
-	left: 15px;
-	font-size: 2rem;
-	transition: transform 80ms ease;
 }
 
 #title-login{
@@ -129,6 +134,16 @@
 		justify-content: center;
 		flex-direction: column;
 		padding: 0;
+	}
+
+	#buttons{
+		width: 90%;
+		padding: 5%;
+		top: 15px;
+	}
+
+	#buttons > i{
+		font-size: 2.2rem;
 	}
 
 	#title-login{

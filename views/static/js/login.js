@@ -18,9 +18,16 @@ $(document).ready(function(){
         }
     });
 
-    $('#login > i.icon-cross').click(function(){
-        visible = remember_see(visible);
+    $('#close-login').click(function(){
         hideSuper();
+        setTimeout(
+            function(){
+                $('#container-login input').val("");
+            }
+        ,200);
+        if(visible==true){
+            visible = remember_see(visible);
+        }
     });
 
 
@@ -42,10 +49,14 @@ $(document).ready(function(){
 
 // Funcion para recuperar cuenta
 function remember_see(v){
+    var width = $(window).width();
     if(v == false){
         $('#password').slideUp();
+        if(width > 767){
+            $('#buttons').animate({'top': '19%'});
+        }
         $('#title-login').animate({'margin-top': '-8rem'}, function(){
-            $('#back-login').css({'display': 'block'});
+            $('#back-login').css({'visibility': 'visible'});
             $('#title-login').text("");
             $('#title-login').css({'display': 'inline-flex'});
             $('#title-login').append('&nbsp;&nbsp;Recuperar Cuenta');
@@ -60,8 +71,11 @@ function remember_see(v){
         v = true;
     }else{
         $('#password').slideDown();
+        if(width > 767){
+            $('#buttons').animate({'top': '14%'});
+        }
         $('#title-login').animate({'margin-top': '-8rem'}, function(){
-            $('#back-login').css({'display': 'none'});
+            $('#back-login').css({'visibility': 'hidden'});
             $('#title-login').text("");
             $('#title-login').append('Iniciar Sesión');
             $('#title-login').animate({'margin-top': '0rem'});
