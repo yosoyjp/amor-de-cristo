@@ -1,0 +1,124 @@
+header{
+	position: absolute;
+	background: rgba(255, 255, 255, 0.4);
+	width: 100%;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#logo{
+	max-width: 30%;
+	transition: all 200ms ease;
+	margin: 5px 0;
+}
+
+#logo > a#img-logo{
+	max-width: 100%;
+}
+
+#logo > a#img-logo > img{
+	max-width: 100%;
+	min-height: 84px;
+	min-width: 280px;
+}
+
+#menu{
+	margin-right: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+#menu > ul > li{
+	display: inline;
+	padding: 10px 5px;
+	border: solid 2px transparent;
+	border-radius: 5px;
+	font-size: 1.1rem;
+	transition: all 100ms ease;
+	font-family: "comfortaa-Bold";
+}
+
+#menu > ul > li > a{
+	color: black;
+	font-family: "comfortaa-Bold";
+}
+
+a{
+	text-decoration: none;
+}
+
+#menu > ul > li#login-menu{
+	background: white;
+	padding: 10px 8px;
+}
+
+#menu > ul > li:hover{
+	cursor: pointer;
+	border: solid 2px white;
+}
+
+#menu > ul > li#login-menu:hover{
+	background: transparent;
+}
+
+#menu-btn{
+	display: none;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 910px){
+	header{
+		flex-direction: column;
+	}
+
+	#logo{
+		min-width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	a#img-logo{
+		margin-left: 30px;
+		width: 40%;
+	}
+
+	a#menu-btn{
+		font-size: 2rem;
+		display: inline-block;
+		margin-right: 30px;
+		cursor: pointer;
+	}
+
+	#menu > ul{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin-bottom: 10px;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	#menu > ul{
+		justify-content: center;
+	}
+
+	header{
+		background: rgb(185, 185, 185);
+	}
+
+	a#img-logo{
+		margin-left: 10px;
+		width: 30%;
+	}
+
+	a#menu-btn{
+		margin-right: 10px;
+	}
+}

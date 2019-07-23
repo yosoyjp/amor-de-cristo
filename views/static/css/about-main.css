@@ -24,7 +24,68 @@ div#about > div{
     min-width: 200px;
     margin: 0px auto;
 }
+
+#mision > .imgAbout{
+    order: 2;
+}
+
 .imgAbout > img{
     width: 92%;
     border-radius: 50%;
+}
+
+@media only screen and (max-width: 910px){
+    .contentAbout{
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    #title-service-area{
+        width: 100%;
+        padding-left: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #text-service-area{
+        width: 90%;
+        margin-left: 5%;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .area{
+        width: 210px;
+        height: 400px;
+    }
+
+    .area > span{
+        font-size: 1.5rem;
+    }
+
+    div#about > div{
+        margin: 40px auto;
+        display: block;
+    }
+
+    .contentAbout{
+        width: 100%;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    #mision > div{
+        text-align: center;
+    }
+
+    .imgAbout{
+        width: 20%;
+        min-width: 200px;
+        margin: 0px auto;
+    }
+    .imgAbout > img{
+        width: 100%;
+        border-radius: 50%;
+    }
 }

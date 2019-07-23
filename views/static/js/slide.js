@@ -6,16 +6,11 @@ $(document).ready(function(){
         $('#list-events').animate({scrollLeft:'-=560'}, 500, "swing");
     });
 
-    var events = $(".event").toArray().length;
-	var	widthContainer = events*280;
-	$('#list-events').scroll(function(){
-		if($('#list-events').width() + $('#list-events').scrollLeft() == widthContainer){
-			$('i.icon-chevron-right').removeClass('activ');
-		}else if($('#list-events').scrollLeft() == 0){
-			$('i.icon-chevron-left').removeClass('activ');
-		}else{
-			$('i.icon-chevron-right').addClass('activ');
-			$('i.icon-chevron-left').addClass('activ');
-		}
-	});
+    var widthElement = document.getElementById("list-events");
+    widthElement = widthElement.scrollWidth;
+    var widthSeeUser = $('#list-events').width();
+    if(widthElement <= widthSeeUser){
+        $('i.icon-chevron-right').hide();
+        $('i.icon-chevron-left').hide();
+    }
 });

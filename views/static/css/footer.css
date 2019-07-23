@@ -40,17 +40,19 @@ footer{
 }
 
 #fmedium{
-	--padding: 60px;
+	--padding: 40px;
 	width: calc(100% - var(--padding)*2);
 	padding-left: var(--padding);
 	padding-right: var(--padding);
 	background: url(../img/footer.jpg) no-repeat center center;
 	background-size: cover;
 	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 #fus{
-	width: 40%;
+	width: 38%;
 	color: white;
 }
 
@@ -63,7 +65,7 @@ footer{
 }
 
 #fus > p{
-	width: 80%;
+	width: 90%;
 }
 
 #links{
@@ -87,7 +89,6 @@ footer{
 
 #info{
 	color: white;
-	width: 30%;
 }
 
 #info > div > h3{
@@ -120,6 +121,7 @@ footer{
 
 #news{
 	color: white;
+	width: 35%;
 }
 
 #new{
@@ -137,7 +139,8 @@ footer{
 #img-new{
 	margin: 10px;
 	height: 80px;
-	width: 80px;
+	min-width: 80px;
+	max-width: 80px;
 	background: white;
 	overflow: hidden;
 }
@@ -156,6 +159,7 @@ footer{
 }
 
 #fdown{
+	margin-top: -2px;
 	padding: 30px 80px;
 	display: flex;
 	justify-content: space-between;
@@ -165,4 +169,86 @@ footer{
 
 #fdown > span{
 	display: block;
+}
+
+@media screen and (max-width: 945px){
+	#fmedium{
+		justify-content: space-around;
+		padding-bottom: 20px;
+	}
+
+	#fus{
+		display: block;
+		width: 80%;
+		margin-top: -15px;
+		margin-bottom: 15px;
+	}
+
+	#fus > #img-us{
+		display: none;
+	}
+
+	#fus > div{
+		height: auto;
+	}
+
+	#fus > p{
+		display: none;
+	}
+
+	#links{
+		justify-content: center;
+		margin-top: 0;
+	}
+
+	#fmedium{
+		flex-wrap: wrap;
+	}
+
+	#info{
+		text-align: center;
+		margin: 0 20px;
+	}
+
+	#news{
+		justify-content: center;
+		margin: 0 20px;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	.fup-section:nth-child(2){
+		display: none;
+	}
+
+	#fup{
+		width: calc(100% - 20px);
+		margin-left: 0;
+		padding: 0 10px;
+		justify-content: center;
+	}
+
+	.fup-section{
+		margin: 15px 0;
+	}
+	
+	#info{
+		width: 100%;
+	}
+	
+	#news{
+		margin-top: 20px;
+		width: 100%;
+		text-align: center;
+	}
+
+	#fdown{
+		padding: 30px 10px;
+		justify-content: space-around;
+	}
+
+	#fdown > span{
+		display: inline-flex;
+		text-align: center;
+	}
 }
