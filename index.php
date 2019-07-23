@@ -47,6 +47,9 @@ $router->get($URL_DEV.'/static/:type/:file', function($type, $file){
 		case 'mp4':
 			header("Content-type: video/mp4");
 			break;
+		case 'webm':
+			header("Content-type: video/webm");
+			break;
 		case 'ttf':
 			header("Content-type: font/ttf");
 			break;

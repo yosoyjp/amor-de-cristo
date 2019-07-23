@@ -19,6 +19,8 @@
     src: url("../fonts/Slim-joe.ttf");
 }
 
+
+
 *{
 	margin: 0;
 	padding: 0;
@@ -53,4 +55,9 @@
     #section-one{
         display: none;
     }
+}
+
+#map {
+    height: 400px;
+    width: 100%;
 }

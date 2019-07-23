@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Sitio Web oficial de la Iglesia Amor de Cristo - Cienaga Magdalena"/>
 		<title>Amor de Cristo-Ciénaga | Inicio</title>
 
 		<link rel="stylesheet" href="./static/css/main.css">
@@ -73,8 +74,8 @@
 		</header>
 
 		<div id="section-one">
-			<video autoplay muted loop>
-				<source src="./static/img/start.mp4" type="video/mp4">
+			<video autoplay muted loop poster="./static/img/pre-video.jpg" >
+				<source src="./static/img/video.webm" >
 			</video> 
 		</div>
 
@@ -128,8 +129,8 @@
 					<a href="">
 						<div id="text-preach">
 							<div>
-								<h3>"TODOS TENEMOS ALGO QUE DAR"</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores facilis officiis natus! Accusantium facere labore ea iusto tempora voluptatem cumque molestias neque in corporis incidunt, saepe quidem quibusdam! Doloremque, nemo.</p>
+								<h3>CAMINO AL OLVIDO</h3>
+								<p>"El que mucho se ausenta, poco a poco dejará de hacer falta." En algún momento de mi existencia llegué a pensar que mi ausencia provocaría un efecto de atención favorable, más meditando en Galatas 6:7 debemos reconocer que el fruto será proporcional a mi comportamiento... Así que sembraremos compañía, <strong>"presencia"</strong> para así Segar lo mismo.</p>
 								<span>P. Carlos Alvarez</span>
 							</div>
 						</div>
@@ -148,7 +149,7 @@
 					<p id="text-connection-points">Es nuestra pasión llevar el mensaje de la verdad a todos los rincones de nuestra ciudad, por ello Amor de Cristo semana tras semana está presente en distintos lugares en los que nuestras Redes se reunen para compartir y disfrutar un momento contigo. Estos son nuestros puntos de Conexión:</p>
 
 					<div id="img-connection">
-						<img id="image-map" src="./static/img/mapa.png" alt="Mapa de puntos de conexión">
+						<div id="map"></div>
 					</div>
 				</div>
 
@@ -205,7 +206,7 @@
 						</div>
 						<div id="text-next">
 							<span id="title-next-event">Servicio Juvenil</span>
-							<span id="date-next-event">JUL 21, 2019 - 6:45 p.m.</span>
+							<span id="date-next-event">AGO 04, 2019 - 6:45 p.m.</span>
 						</div>
 					</div>
 
@@ -213,39 +214,33 @@
 						<i class="icon-chevron-left"></i>
 						<div id="list-events">
 							<div class="event">
-								<img class="img-event" src="./static/img/event-1.jpg" alt="">
-								<span class="title-event">Fiesta de Primicias</span>
-								<span class="date-event">FEB 2, 2019 - 5:00 p.m.</span>
+								<img class="img-event" src="./static/img/provision.jpg" alt="">
+								<span class="title-event">Retiro de provisión</span>
+								<span class="date-event">AGO 11, 2019 - 6:45 p.m.</span>
 							</div>
 
 							<div class="event">
-								<img class="img-event" src="./static/img/event-1.jpg" alt="">
-								<span class="title-event">Fiesta de Primicias</span>
-								<span class="date-event">FEB 2, 2019 - 5:00 p.m.</span>
+								<img class="img-event" src="./static/img/lanzamiento.jpg" alt="">
+								<span class="title-event">Lanzamiento</span>
+								<span class="date-event">AGO 18 - 19, 2019</span>
 							</div>
 
 							<div class="event">
-								<img class="img-event" src="./static/img/event-1.jpg" alt="">
-								<span class="title-event">Fiesta de Primicias</span>
-								<span class="date-event">FEB 2, 2019 - 5:00 p.m.</span>
+								<img class="img-event" src="./static/img/supercelulas.jpg" alt="">
+								<span class="title-event">Super Celulas</span>
+								<span class="date-event">AGO 26 - 31, 2019</span>
 							</div>
 
 							<div class="event">
-								<img class="img-event" src="./static/img/event-1.jpg" alt="">
-								<span class="title-event">Fiesta de Primicias</span>
-								<span class="date-event">FEB 2, 2019 - 5:00 p.m.</span>
+								<img class="img-event" src="./static/img/encuentro.jpg" alt="">
+								<span class="title-event">Encuentro</span>
+								<span class="date-event">OCT 12 - 14, 2019</span>
 							</div>
 
 							<div class="event">
-								<img class="img-event" src="./static/img/event-1.jpg" alt="">
-								<span class="title-event">Fiesta de Primicias</span>
-								<span class="date-event">FEB 2, 2019 - 5:00 p.m.</span>
-							</div>
-
-							<div class="event">
-								<img class="img-event" src="./static/img/event-1.jpg" alt="">
-								<span class="title-event">Fiesta de Primicias</span>
-								<span class="date-event">FEB 2, 2019 - 5:00 p.m.</span>
+								<img class="img-event" src="./static/img/graduacion.jpg" alt="">
+								<span class="title-event">Graduacion de academia de lideres</span>
+								<span class="date-event">OCT 27, 2019</span>
 							</div>
 						</div>
 						<i class="icon-chevron-right"></i>
@@ -339,4 +334,21 @@
 			</footer>
 		</div>
 	</body>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHG2NwzFqZSomVPd91nfkzod7hX0vazcg&callback=initMap">
+    </script>
+	<script>
+		var map;
+		function initMap() {
+			map = new google.maps.Map(document.getElementById('map'), {
+				center: {lat: 11.005379, lng: -74.248020},
+				zoom: 17
+			});
+			var marker = new google.maps.Marker({
+				position: {lat: 11.005379, lng: -74.248020},
+				map: map,
+				title: 'Iglesia Amor de Cristo'
+				});
+		}
+	</script>
 </html>

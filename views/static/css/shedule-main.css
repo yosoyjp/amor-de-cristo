@@ -90,6 +90,8 @@
 
 .img-event{
 	width: 260px;
+	height: 150px;
+	object-fit: cover;
 }
 
 .title-event{
@@ -117,7 +119,8 @@
 	}
 
 	.img-event{
-		width: 200px;
+		width: 180px;
+		height: 110px;
 	}
 
 	#shedule{
