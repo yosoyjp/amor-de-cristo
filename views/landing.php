@@ -126,7 +126,7 @@
 						<div id="marco"></div>
 						<img src="./static/img/preach.jpg" alt="">
 					</div>
-					<a href="">
+					<a>
 						<div id="text-preach">
 							<div>
 								<h3>CAMINO AL OLVIDO</h3>
@@ -202,11 +202,11 @@
 						
 					<div id="next">
 						<div id="img-next">
-							<img id="src-img-next" src="./static/img/next.jpg" alt="">
+							<img id="src-img-next" src="./static/img/invitado.jpg" alt="">
 						</div>
 						<div id="text-next">
-							<span id="title-next-event">Servicio Juvenil</span>
-							<span id="date-next-event">AGO 04, 2019 - 6:45 p.m.</span>
+							<span id="title-next-event">Escuela Dominical - Ap. Armando Ospino</span>
+							<span id="date-next-event">JUL 28, 2019 - 8:00 a.m.</span>
 						</div>
 					</div>
 
@@ -214,9 +214,15 @@
 						<i class="icon-chevron-left"></i>
 						<div id="list-events">
 							<div class="event">
+								<img class="img-event" src="./static/img/inquebrantables.jpg" alt="">
+								<span class="title-event">Servicio juvenil</span>
+								<span class="date-event">AGO 04, 2019 - 6:45 p.m.</span>
+							</div>
+
+							<div class="event">
 								<img class="img-event" src="./static/img/provision.jpg" alt="">
 								<span class="title-event">Retiro de provisión</span>
-								<span class="date-event">AGO 11, 2019 - 6:45 p.m.</span>
+								<span class="date-event">AGO 11, 2019 - 5:00 p.m.</span>
 							</div>
 
 							<div class="event">
@@ -226,9 +232,27 @@
 							</div>
 
 							<div class="event">
+								<img class="img-event" src="./static/img/inquebrantables.jpg" alt="">
+								<span class="title-event">Servicio juvenil</span>
+								<span class="date-event">AGO 25, 2019 - 6:45 p.m.</span>
+							</div>
+
+							<div class="event">
 								<img class="img-event" src="./static/img/supercelulas.jpg" alt="">
 								<span class="title-event">Super Celulas</span>
 								<span class="date-event">AGO 26 - 31, 2019</span>
+							</div>
+
+							<div class="event">
+								<img class="img-event" src="./static/img/inquebrantables.jpg" alt="">
+								<span class="title-event">Servicio juvenil</span>
+								<span class="date-event">SEP 8, 2019 - 6:45 p.m.</span>
+							</div>
+
+							<div class="event">
+								<img class="img-event" src="./static/img/mujeres.jpg" alt="">
+								<span class="title-event">Servicio de mujeres</span>
+								<span class="date-event">SEP 28, 2019 - 6:45 p.m.</span>
 							</div>
 
 							<div class="event">

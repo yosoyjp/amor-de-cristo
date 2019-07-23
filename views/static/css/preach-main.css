@@ -40,19 +40,10 @@
 	cursor: pointer;
 }
 
-#text-preach > div:hover{
-	background: rgb(50, 50, 50);
-	box-shadow: none;
-}
-
 #text-preach > div > h3{
 	color: rgb(10, 27, 71);
 	font-size: 2rem;
 	margin-bottom: 20px;
-}
-
-#text-preach > div:hover > h3{
-	color: white
 }
 
 #text-preach > div > p{
@@ -60,19 +51,11 @@
 	color: rgb(15, 39, 101);
 }
 
-#text-preach > div:hover > p{
-	color: white
-}
-
 #text-preach > div > span{
 	color: rgb(10, 27, 71);
 	display: block;
 	font-size: 1.6rem;
 	text-align: right;
-}
-
-#text-preach > div:hover > span{
-	color: white
 }
 
 #img-preach{
@@ -116,6 +99,21 @@
 	margin: 0 10px;
 	background: black;
 	border-radius: 50%;
+}
+@media only screen and (min-width: 767px){
+	#text-preach > div:hover{
+		background: rgb(50, 50, 50);
+		box-shadow: none;
+	}
+	#text-preach > div:hover > span{
+		color: white
+	}
+	#text-preach > div:hover > p{
+		color: white
+	}
+	#text-preach > div:hover > h3{
+		color: white
+	}
 }
 
 @media only screen and (max-width: 767px){
