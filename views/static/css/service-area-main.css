@@ -43,27 +43,27 @@
 }
 
 .area#praise{
-	background-image: url(../img/praise.jpg);
+	background-image: url(../img/musica.jpg);
 }
 
 .area#dance{
-	background-image: url(../img/dance.jpg);
+	background-image: url(../img/danza.jpg);
 }
 
 .area#multimedia{
-	background-image: url(../img/multimedia.jpg);
+	background-image: url(../img/audiovisual.jpg);
 }
 
 .area#server{
-	background-image: url(../img/server.jpg);
+	background-image: url(../img/servidores.jpg);
 }
 
 .area#master{
-	background-image: url(../img/master.jpg);
+	background-image: url(../img/maestros.jpg);
 }
 
 .area#other{
-	background-image: url(../img/other.jpg);
+	background-image: url(../img/otros.jpg);
 }
 
 .area:hover{

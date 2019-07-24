@@ -4,6 +4,7 @@ require './controller/routing/route.php';
 
 require './controller/group.controller.php';
 require './controller/net.controller.php';
+require './controller/departament.controller.php';
 require './model/database.class.php';
 
 
@@ -65,7 +66,9 @@ $router->get($URL_DEV.'/', function (){
 	return require ('./views/landing.php');
 });
 
-$router->get($URL_DEV.'/description', function (){
+$router->get($URL_DEV.'/description/:departament', function ($departament){
+	$data = DepartamentController::getByName($departament);
+	//echo $data;
 	return require ('./views/description.php');
 });
 
@@ -82,5 +85,10 @@ $router->get($URL_DEV.'/nets', 'NetController::getAlls');
 $router->post($URL_DEV.'/net', 'NetController::newNet');
 $router->put($URL_DEV.'/net', 'NetController::updateNet');
 $router->delete($URL_DEV.'/net', 'NetController::deleteNet');
+
+$router->get($URL_DEV.'/departaments', 'DepartamentController::getAlls');
+$router->post($URL_DEV.'/departament', 'DepartamentController::newDepartament');
+$router->put($URL_DEV.'/departament', 'DepartamentController::updateDepartament');
+$router->delete($URL_DEV.'/departament', 'DepartamentController::deleteDepartament');
 
 $router->run($_SERVER["REQUEST_METHOD"]);

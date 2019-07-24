@@ -129,6 +129,8 @@ DROP TABLE IF EXISTS `db_amordecristo`.`departaments` ;
 CREATE TABLE IF NOT EXISTS `db_amordecristo`.`departaments` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
+  `description` mediumtext NOT NULL,
+  `slogan` VARCHAR(140) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
